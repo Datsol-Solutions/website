@@ -1,32 +1,25 @@
-// VideoBackground.js
-import React, { useState } from 'react';
-import { VideoBackground } from 'react-video-cover';
+import React from 'react';
+import { VideoCover } from 'react-video-cover'; // Corrected import
+import './Video.css';
 
 function BackgroundVideo() {
-    const [isPlaying, setIsPlaying] = useState(false);
+  const videoOptions = {
+    src: 'bg1.mp4', // Replace with the path to your video file
+    autoPlay: true,
+    loop: true,
+    muted: true,
+  };
 
-    const togglePlay = () => {
-      const video = document.querySelector('video');
-      if (isPlaying) {
-        video.pause();
-      } else {
-        video.play();
-      }
-      setIsPlaying(!isPlaying);
-    };
-  
-    return (
-      <div className="video-player">
-        <video controls>
-          <source src="bg1.mp4" type="video/mp4" />
-          {/* Add additional source elements for different formats if needed */}
-          Your browser does not support the video tag.
-        </video>
-        <button onClick={togglePlay}>
-          {isPlaying ? 'Pause' : 'Play'}
-        </button>
+  return (
+    <section className="background-video-section">
+      <VideoCover videoOptions={videoOptions} />
+      {/* Add other content or components you want to display on top of the video */}
+      <div className="content">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover amazing content here!</p>
       </div>
-    );
+    </section>
+  );
 }
 
 export default BackgroundVideo;

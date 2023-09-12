@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
 import BackgroundVideo from './VideoBackground';
 import Navibar from './Navibar';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,13 +8,15 @@ function App() {
   return (
     <Router>
       <Navibar />
-      <Routes>
+      <Switch>
         <Route path="/" exact>
-          {/* <BackgroundVideo /> */}
-          
+          <React.Fragment>
+            <BackgroundVideo />
+            
+          </React.Fragment>
         </Route>
         {/* Define other routes here */}
-      </Routes>
+      </Switch>
     </Router>
   );
 }
