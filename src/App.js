@@ -10,11 +10,11 @@ function App() {
     <Router>
       <Navibar />
       <div>
-      <BackgroundVideo/>
+        <BackgroundVideo />
       </div>
-        <div>
-        <OurTeam/>
-        </div>
+      <div>
+        <OurTeam />
+      </div>
     </Router>
   );
 }
