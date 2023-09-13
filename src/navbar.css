@@ -7,13 +7,16 @@
 
 /* Navbar styles */
 .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 100;
     background-color:  #58bcce;
     color: #fff;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    position: fixed;
+    /* position: fixed; */
 }
 
 .logo img {
@@ -25,6 +28,7 @@
 .nav-links {
     list-style: none;
     display: flex;
+    justify-content: space-around;
 }
 
 .nav-links li {
