@@ -1,5 +1,5 @@
 .background-video-section {
-    position: relative;
+    position: absolute;
     height: 100vh; /* Adjust the height as needed */
     overflow: hidden;
   }
@@ -14,7 +14,7 @@
     z-index: 1;
   }
   video {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     object-fit: cover;
     position: absolute;
     width: 100%;
