@@ -28,7 +28,7 @@
    
    /*Card footer*/
    .card-social {
-    /* transform: translateY(200%); */
+    transform: translateY(200%);
     display: flex;
     justify-content: space-between;
     width: 100%;
