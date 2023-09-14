@@ -19,15 +19,5 @@
     gap: 40px;
   }
   
-  /* Media query for smaller screens (e.g., mobile devices) */
-  @media (max-width: 768px) {
-    .team-cards {
-      flex-direction: column; /* Stack cards vertically on smaller screens */
-      align-items: center;
-    }
   
-    .card {
-      width: 100%; /* Full width for cards on smaller screens */
-    }
-  }
   

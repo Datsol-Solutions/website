@@ -30,9 +30,10 @@
    .card-social {
     transform: translateY(200%);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     opacity: 0;
+    align-items: center;
     transition: transform .2s ease, opacity .2s ease;
    }
    
