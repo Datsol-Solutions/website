@@ -45,7 +45,7 @@
     padding: 10px;
   }
   
-  .about-us-image-0 .about-us-image-2{
+  .about-us-image-0, .about-us-image-2{
 
     width: 24%;
     height: 100%;

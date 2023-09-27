@@ -52,8 +52,8 @@ function AboutUsPage() {
         className={`about-us-row ${animationStates[1] ? 'fade-in-right' : ''}`}
       >
         <div className="about-us-box">
-          <div className="about-us-image-1">Image 2</div>
           <div className="about-us-text">Text 2</div>
+          <div className="about-us-image-1">Image 2</div>
         </div>
       </div>
       <div
