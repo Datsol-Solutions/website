@@ -1,30 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import './AboutUs.css'; // Import your CSS file for styling
+import React, { useEffect, useState } from 'react';
+import './AboutUs.css';
 
-function AboutUs() {
-  const [animate, setAnimate] = useState(false);
+const boxesData = [
+  {
+    image: 'image1.jpg',
+    heading: 'Box 1',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    image: 'image2.jpg',
+    heading: 'Box 2',
+    text: 'Nulla quis lorem ut libero malesuada feugiat.',
+  },
+  {
+    image: 'image3.jpg',
+    heading: 'Box 3',
+    text: 'Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.',
+  },
+];
+
+function Box({ image, heading, text, delay }) {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Add a delay to the animation to create the desired sequence
-    setTimeout(() => {
-      setAnimate(true);
-    }, 500); // Adjust the delay as needed
-  }, []);
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, delay);
+
+    return () => clearTimeout(timeout);
+  }, [delay]);
 
   return (
-    <div className="about-us-container">
-      <div className={`about-us-box ${animate ? 'fade-in-left' : ''}`}>
-        <div className="about-us-image">Image 1</div>
-        <div className="about-us-text">Text 1</div>
-      </div>
-      <div className={`about-us-box ${animate ? 'fade-in-right' : ''}`}>
-        <div className="about-us-image">Image 2</div>
-        <div className="about-us-text">Text 2</div>
-      </div>
-      <div className={`about-us-box ${animate ? 'fade-in-left' : ''}`}>
-        <div className="about-us-image">Image 3</div>
-        <div className="about-us-text">Text 3</div>
-      </div>
+    <div
+      className={`box fade-${isVisible ? 'in' : 'out'}`}
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      <img src={image} alt={heading} />
+      <h2>{heading}</h2>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+function AboutUs() {
+  return (
+    <div className="container">
+      {boxesData.map((box, index) => (
+        <Box
+          key={index}
+          image={box.image}
+          heading={box.heading}
+          text={box.text}
+          delay={index * 1000} // Adjust the delay as needed
+        />
+      ))}
     </div>
   );
 }

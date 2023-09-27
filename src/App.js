@@ -1,11 +1,12 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import BackgroundVideo from './VideoBackground';
 import Navibar from './Navibar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AboutUs from './AboutUs';
 import OurTeam from './OurTeam'
+import AboutUsPage from './AboutUsPage';
 function App() {
   return (
     <Router>
@@ -14,7 +15,7 @@ function App() {
         <BackgroundVideo />
       </div>
       <div>
-        <AboutUs />
+        <AboutUsPage />
       </div>
       <div>
         <OurTeam />

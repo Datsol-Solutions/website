@@ -1,0 +1,88 @@
+.about-us-container {
+  margin-top: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  gap:20px;
+    width: 100%;
+    height :100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .about-us-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-50px); /* Initial position for left animation */
+    margin-bottom: 5%;
+    animation-fill-mode: forwards;
+    animation-duration: 1s; /* Animation duration */
+    animation-timing-function: ease-in-out;
+  }
+  
+  .about-us-row:nth-child(odd) {
+    animation-name: fade-in-left;
+  }
+  
+  .about-us-row:nth-child(even) {
+    animation-name: fade-in-right;
+  }
+  
+  .about-us-box {
+    width: 80%; /* Set width to 80% of the screen */
+    height: 30vh; /* Set height to 30% of the screen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .about-us-image-0 .about-us-image-2{
+
+    width: 24%;
+    height: 100%;
+    background-color: #3498db;
+  }
+
+  .about-us-image-1{
+    /* align-self: flex-start; */
+    width: 24%;
+    height: 100%;
+    background-color: #3498db;
+  }
+  .about-us-text {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Define the animations */
+  @keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 1s;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
