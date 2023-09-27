@@ -1,0 +1,25 @@
+/* .background-video-section {
+    position: absolute;
+    height: 100vh; 
+    overflow: hidden;
+  } */
+  
+  .content {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 0;
+  }
+  video {
+    /* margin-top: 60px; */
+    object-fit: cover;
+    position: relative!important;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
