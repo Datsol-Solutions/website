@@ -1,0 +1,58 @@
+.about-us-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .about-us-box {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .about-us-image {
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  /* Define the animations */
+  .fade-in-left {
+    animation: fadeLeft 1s ease-in-out forwards;
+  }
+  
+  .fade-in-right {
+    animation: fadeRight 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

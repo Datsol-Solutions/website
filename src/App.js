@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BackgroundVideo from './VideoBackground';
 import Navibar from './Navibar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AboutUs from './AboutUs';
 import OurTeam from './OurTeam'
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <Navibar />
       <div>
         <BackgroundVideo />
+      </div>
+      <div>
+        <AboutUs />
       </div>
       <div>
         <OurTeam />
