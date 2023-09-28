@@ -6,6 +6,7 @@ import BackgroundVideo from './VideoBackground';
 import Navibar from './Navibar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import OurTeam from './OurTeam'
+import ParallaxEffect from './seperation'
 import AboutUsPage from './AboutUsPage';
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       </div>
       <div>
         <AboutUsPage />
+      </div>
+      <div>
+        <ParallaxEffect />
       </div>
       <div>
         <OurTeam />

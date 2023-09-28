@@ -1,13 +1,34 @@
-import React from 'react';
-import './ParallaxEffect.css'; // Import your CSS file with styles
+
+import React, { useState, useEffect } from 'react';
+import './seperation.css'; // Import your CSS file with styles
 
 function ParallaxEffect() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    // Update the scroll position when the user scrolls
+    const handleScroll = () => {
+      setScrollPosition(window.pageYOffset);
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Calculate the background position based on the scroll position
+  const backgroundPositionY = scrollPosition * 0.2 + 'px';
+
   const containerStyle = {
-    backgroundImage: `url('./')`,
+    backgroundImage: `url('/seperation.jpg')`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed', // Fixed background for the parallax effect
-    minHeight: '100vh', // Ensure the container takes up the entire viewport height
+    backgroundPosition: `center ${backgroundPositionY}`,
+    backgroundAttachment: 'fixed',
+    minHeight: '100vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -32,3 +53,4 @@ function ParallaxEffect() {
 }
 
 export default ParallaxEffect;
+
