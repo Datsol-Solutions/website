@@ -44,7 +44,7 @@ function AboutUsPage() {
       >
         <div className="about-us-box">
           <div className="about-us-image-0">Image 1</div>
-          <div className="about-us-text">Text 1</div>
+          <div className="about-us-text"> WHO WE ARE?</div>
         </div>
       </div>
       <div
@@ -52,7 +52,7 @@ function AboutUsPage() {
         className={`about-us-row ${animationStates[1] ? 'fade-in-right' : ''}`}
       >
         <div className="about-us-box">
-          <div className="about-us-text">Text 2</div>
+          <div className="about-us-text">WHAT WE DO?</div>
           <div className="about-us-image-1">Image 2</div>
         </div>
       </div>
@@ -62,7 +62,7 @@ function AboutUsPage() {
       >
         <div className="about-us-box">
           <div className="about-us-image-2">Image 3</div>
-          <div className="about-us-text">Text 3</div>
+          <div className="about-us-text">HOW CAN WE HELP YOU?</div>
         </div>
       </div>
     </div>
