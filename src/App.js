@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import OurTeam from './OurTeam'
 import ParallaxEffect from './seperation'
 import AboutUsPage from './AboutUsPage';
+import Achievement from './Achievement';
 function App() {
   return (
     <Router>
@@ -20,6 +21,9 @@ function App() {
       </div>
       <div>
         <ParallaxEffect />
+      </div>
+      <div>
+        <Achievement/>
       </div>
       <div>
         <OurTeam />
