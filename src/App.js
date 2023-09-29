@@ -10,6 +10,7 @@ import ParallaxEffect from './seperation'
 import AboutUsPage from './AboutUsPage';
 import Achievement from './Achievement';
 import AchievementSection from './Achievement';
+import Contact from './ContactUs'
 import Carousel from './Carousel';
 const cardsData = [
   {
@@ -64,6 +65,9 @@ function App() {
       </div>
       <div className="App">
       <Carousel cards={cardsData} />
+    </div>
+    <div>
+      <Contact/>
     </div>
     </Router>
   );
