@@ -1,0 +1,48 @@
+.achievement-section {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .map-gif {
+    flex:1;
+    max-width: 100%;
+    overflow: hidden;
+    height:auto;
+  }
+  
+  .map-gif img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .text-content {
+    padding-top: 7%;
+    width: 30%;
+    padding-left: 20px;
+    height:67vh;
+    display:block;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+  }
+  
+  .achievement-item {
+    margin-bottom: 30px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(14, 14, 143);
+  }
+
+  .header_achievement{
+    padding:10px;
+    text-align: center;
+  }

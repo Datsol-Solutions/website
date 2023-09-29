@@ -8,36 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import OurTeam from './OurTeam'
 import ParallaxEffect from './seperation'
 import AboutUsPage from './AboutUsPage';
-import Carousel from './Carousel';
 
-const cardsData = [
-  {
-    title: 'Card 1',
-    description: 'Description 1',
-    imageSrc: 'card1.jpg',
-  },
-  {
-    title: 'Card 2',
-    description: 'Description 2',
-    imageSrc: 'card2.jpg',
-  },
-  {
-    title: 'Card 3',
-    description: 'Description 3',
-    imageSrc: 'card3.jpg',
-  },
-  {
-    title: 'Card 4',
-    description: 'Description 2',
-    imageSrc: 'card2.jpg',
-  },
-  {
-    title: 'Card 5',
-    description: 'Description 3',
-    imageSrc: 'card3.jpg',
-  },
-  // Add more card data as needed
-];
+
+
 
 function App() {
   return (
@@ -55,9 +28,7 @@ function App() {
       <div>
         <OurTeam />
       </div>
-      <div className="App">
-      <Carousel cards={cardsData} />
-    </div>
+      
     </Router>
   );
 }
