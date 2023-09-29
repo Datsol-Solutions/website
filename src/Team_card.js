@@ -1,7 +1,7 @@
 import React from 'react';
 import './Team_card.css'; // Import your CSS file
 
-function Card(props) {
+function Teamcard(props) {
   return (
     <div class="card">
     <div class="card-info">
@@ -28,4 +28,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default Teamcard;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Team_card'; // Import the Card component
+import Teamcard from './Team_card'; // Import the Card component
 import './OurTeam.css'; // Import your CSS file
 function OurTeam() {
   const teamData = [
@@ -41,7 +41,7 @@ function OurTeam() {
       <h1>Our Team</h1>
       <div className="team-cards">
         {teamData.map((teamMember) => (
-          <Card
+          <Teamcard
             key={teamMember.id}
             name={teamMember.name}
             description={teamMember.description}
