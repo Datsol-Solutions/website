@@ -45,6 +45,7 @@ function App() {
     <Router>
       <Navibar />
       <div>
+      
         <BackgroundVideo />
       </div>
       <div>
