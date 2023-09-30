@@ -2,31 +2,48 @@
 .scroll-button {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Adjust the left position for the front page */
+    left: 20px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 100;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .scroll-button.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 8px 15px; /* Adjust padding for a smaller size */
-    cursor: pointer;
+    padding: 8px 15px;
     border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .button-text {
     opacity: 0;
-    z-index: 100;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-}
-
-.scroll-button.show {
+    transition: opacity 0.3s;
+  }
+  
+  .button-text.hovered {
     opacity: 1;
-    visibility: visible;
-}
-
-.scroll-button span {
-    font-size: 18px; /* Adjust the font size for a smaller icon */
-}
-
-/* Adjust the position for the rest of the page */
-body:not(.front-page) .scroll-button {
+  }
+  
+  /* Adjust the position for the rest of the page */
+  body:not(.front-page) .scroll-button {
     right: 20px;
     left: auto;
-}
-
+  }
+  
+  .scroll-button:hover .button-content {
+    background-color: #007bff;
+    transition: all 0.3s ease;
+  }
+  

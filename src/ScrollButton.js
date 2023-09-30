@@ -4,6 +4,7 @@ import './ScrollButton.css';
 
 const ScrollButton = () => {
   const [showButton, setShowButton] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     // Function to handle scroll event
@@ -22,17 +23,27 @@ const ScrollButton = () => {
     };
   }, []);
 
-  // Function to scroll to the top when the button is clicked
-  const scrollToTop = () => {
+  // Function to scroll to the bottom when the button is clicked
+  const scrollToBottom = () => {
     window.scrollTo({
-      top: 0,
+      top: document.body.scrollHeight,
       behavior: 'smooth',
     });
   };
 
   return (
-    <div className={`scroll-button ${showButton ? 'show' : ''}`} onClick={scrollToTop}>
-      {showButton ? <span>&#9650;</span> : 'Contact Us'}
+    <div
+      className={`scroll-button ${showButton ? 'show' : ''} ${isHovered ? 'hovered' : ''}`}
+      onClick={scrollToBottom}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="button-content">
+        {showButton && !isHovered && <span>&#9660;</span>}
+        <span className={`button-text ${isHovered ? 'hovered' : ''}`}>
+          {isHovered ? 'Contact Us' : ''}
+        </span>
+      </div>
     </div>
   );
 };
