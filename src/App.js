@@ -11,7 +11,7 @@ import AboutUsPage from './AboutUsPage';
 import Achievement from './Achievement';
 import Carousel from './Carousel';
 import './ContactUs.css'; // Import your CSS file with styles
-import Logo from './logo.jpeg'; // Import your logo image
+import Logo from './logo.png'; // Import your logo image
 import ScrollButton from './ScrollButton';
 
 export default function App() {

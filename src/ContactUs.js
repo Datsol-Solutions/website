@@ -1,7 +1,7 @@
 // ContactUs.js
 import React from 'react';
 import './ContactUs.css'; // Import your CSS file with styles
-import Logo from './logo.jpeg'; // Import your logo image
+import Logo from './logo.png'; // Import your logo image
 
 function ContactUs() {
   return (
