@@ -86,11 +86,12 @@ export default function App() {
       <div>
         <Achievement />
       </div>
-      <div>
-        <OurTeam />
-      </div>
+      
       <div className="App">
         <Carousel cards={cardsData} />
+      </div>
+      <div>
+        <OurTeam />
       </div>
       <div className="contact-us-container">
         <div className="logo-container">
@@ -116,6 +117,7 @@ export default function App() {
           </form>
         </div>
       </div>
+      
     </Router>
   );
 }
