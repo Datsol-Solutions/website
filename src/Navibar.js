@@ -1,6 +1,6 @@
-import React,{useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import logo from './logo.jpeg'
+import logo from './logo.jpeg';
 
 function Navibar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,19 +25,18 @@ function Navibar() {
   }, []);
 
   return (
-    <nav className={ `navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <img src={logo} alt='logo' />
+        <img src={logo} alt='Your Company Logo' />
       </div>
       <ul className="link-list nav-links">
-        <li><a  href="/" >Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/services">Area Of Expertise</a></li>
-        <li><a href="/contact">Our Team</a></li>
+        <li><a className={isScrolled ? 'scrolled' : ''} href="/">Home</a></li>
+        <li><a className={isScrolled ? 'scrolled' : ''} href="/about">About Us</a></li>
+        <li><a className={isScrolled ? 'scrolled' : ''} href="/services">Area Of Expertise</a></li>
+        <li><a className={isScrolled ? 'scrolled' : ''} href="/contact">Our Team</a></li>
       </ul>
     </nav>
   );
 }
-
 
 export default Navibar;

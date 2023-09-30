@@ -12,7 +12,7 @@
     font-weight:bold ;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0); 
-    transition: background-color 0.3s ease, color 0.3s ease !important; /* Smooth transition effect */
+    transition: background-color 0.2s ease, color 0.2s ease !important; /* Smooth transition effect */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@
 .scrolled {
     background-color: #fff !important; /* White background color when scrolled */
     color:blue !important;
-    transition: background-color 0.3s ease, color 0.3s ease !important;
+    transition: background-color 0.2s ease, color 0.3s ease !important;
   }
 .logo img {
     margin-left: 10px;
@@ -38,12 +38,9 @@
 .nav-links li {
     margin-right: 20px;
 }
-.nav-links a{
-    text-decoration: none;
-    color: red;/*initial color*/
-}
+
 .nav-links a:hover {
-    color: #333; /* Change the color on hover */
+    color: #220b76; /* Change the color on hover */
 }
 
 /* Responsive styles */
@@ -66,3 +63,31 @@
         margin-bottom: 10px;
     }
 }
+/* ... Your existing styles ... */
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* Initial color */
+    background-color: transparent !important; /* Initial background color */
+    transition: color 0.3s ease, background-color 0.3s ease !important;
+}
+
+.nav-links a.scrolled {
+    color: blue !important; /* Color when scrolled */
+    background-color: transparent !important; /* Background color when scrolled */
+    transition: color 0.3s ease !important;
+}
+
+.nav-links a.scrolled:hover{
+    color: rgb(8, 20, 61) !important; /* Color when scrolled */
+}
+
+
+
+
+
+
+
+
+
+
