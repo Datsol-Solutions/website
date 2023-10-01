@@ -1,6 +1,6 @@
 .achievement-section {
     display: flex;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
   }
   
@@ -21,7 +21,7 @@
     padding-top: 7%;
     width: 30%;
     padding-left: 20px;
-    height:67vh;
+    height:auto;
     display:block;
     justify-content: space-between;
     background-color: #f2f2f2;

@@ -5,6 +5,7 @@
     text-align: center;
     padding: 20px;
     z-index: 2;
+    overflow-x: hidden;
   }
   
   .our-team h1 {

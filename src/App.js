@@ -45,6 +45,26 @@ export default function App() {
       description: 'Description 3',
       imageSrc: 'card3.jpg',
     },
+    {
+      title: 'Card 6',
+      description: 'Description 6',
+      imageSrc: 'card3.jpg',
+    },
+    {
+      title: 'Card 7',
+      description: 'Description 7',
+      imageSrc: 'card3.jpg',
+    },
+    {
+      title: 'Card 8',
+      description: 'Description 8',
+      imageSrc: 'card3.jpg',
+    },
+    {
+      title: 'Card 9',
+      description: 'Description 9',
+      imageSrc: 'card3.jpg',
+    },
     // Add more card data as needed
   ];
 

@@ -16,7 +16,7 @@ function Carousel({ cards }) {
     return () => clearInterval(interval);
   }, [cards, isHovered]);
 
-  const translateValue = -activeIndex * 33;
+  const translateValue = -activeIndex * 33.33;
 
   return (
     <div
@@ -24,6 +24,7 @@ function Carousel({ cards }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+    <h2> Our Services </h2>
       <div className="carousel" style={{ transform: `translateX(${translateValue}%)` }}>
         {cards.map((card, index) => (
           <ServiceCard
