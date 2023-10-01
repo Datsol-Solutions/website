@@ -13,6 +13,7 @@ import Carousel from './Carousel';
 import './ContactUs.css'; // Import your CSS file with styles
 import Logo from './logo.png'; // Import your logo image
 import ScrollButton from './ScrollButton';
+import Footer from './Footer';
 
 export default function App() {
   const emailRef = useRef();
@@ -137,7 +138,7 @@ export default function App() {
           </form>
         </div>
       </div>
-      
+      <Footer/>
     </Router>
   );
 }
