@@ -1,42 +1,28 @@
 import React from 'react';
-//import { VideoCover } from 'react-video-cover'; // Corrected import
 import './Video.css';
-import video from './bg1.mp4'
+import video from './bg1.mp4';
+import logo from './logo.png';
 
-function BackgroundVideo() {
-   /* const videoOptions = {
-     src: {video}, // Replace with the path to your video file
-     autoPlay: true,
-     loop: true,
-     muted: true,
-   }; */
-  
+
+export default function BackgroundVideo() {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
   return (
-    <section>
-       <div className='main'>
-
-        <video src={video} autoPlay loop muted/>
-
-    </div>
-    <div className="content">
-        <h1>Welcome to Our Website</h1>
-         <h5>Discover amazing content here!</h5>
+    <section className="background-video-section">
+      <div className="main">
+        <video src={video} autoPlay loop muted />
+        <div className="logoandtagline">
+          <img className="mainlogo" src={logo} alt="logo" />
+          <h1>Welcome to Our Website</h1>
+        </div>
+        <div className="button-container" onClick={scrollToBottom}>
+          <button className="button button1">Contact Us</button>
+        </div>
       </div>
     </section>
-    
-  )
-
-   /* return (
-     <section className="background-video-section">
-       <VideoCover videoOptions={videoOptions} />
-       // Add other content or components you want to display on top of the video 
-       <div className="content">
-         <h1>Welcome to Our Website</h1>
-         <p>Discover amazing content here!</p>
-       </div>
-     </section>
-   ); 
-   */
+  );
 }
-
-export default BackgroundVideo;

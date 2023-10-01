@@ -1,26 +1,66 @@
-/* .background-video-section {
-    position: absolute;
-    height: 100vh; 
-    overflow: hidden;
-  } */
-  
-  .content {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    z-index: 0;
-  }
-  video {
-    /* margin-top: 60px; */
-    margin-bottom: 10%;
-    object-fit: cover;
-    position: relative!important;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-  }
+.background-video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.logoandtagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #081f37;
+  z-index: 1;
+  background-color: transparent;
+  font: IBM plex sans;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.mainlogo {
+  width: 85%;
+  height: auto;
+  z-index: 2;
+}
+
+.button-container {
+  position: absolute;
+  top: 35vw; /* Adjust the vertical position */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.button {
+  background-color: #FDFDFA;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #ffd369;
+}
+
+.button1:hover {
+  background-color: #ffd369;
+  color: white;
+}
