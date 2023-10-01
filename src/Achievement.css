@@ -18,6 +18,7 @@
   }
   
   .text-content {
+    align-content: center;
     padding-top: 7%;
     width: 30%;
     padding-left: 20px;
@@ -29,6 +30,7 @@
   
   .achievement-item {
     margin-bottom: 30px;
+    padding-left: 10%;
   }
   
   h3 {
@@ -36,13 +38,20 @@
     padding-bottom: 10px;
   }
   
-  p {
-    font-size: 1.2rem;
+  .numbers{
+    display: inline;
+    font-size: 2rem;
     font-weight: bold;
     color: rgb(14, 14, 143);
+    padding: 5px;
   }
 
   .header_achievement{
     padding:10px;
     text-align: center;
+  }
+
+  .number_text{
+    display: inline;
+    padding: 0px 10px 0px 10px;
   }

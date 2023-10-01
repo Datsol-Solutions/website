@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 40% 60%; /* 40% for the left div, 60% for the right div */
   gap: 20px; /* Adjust the gap between the divs as needed */
+  overflow: hidden;
 }
 
 /* Styles for the left div containing the logo */

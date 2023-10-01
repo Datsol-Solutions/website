@@ -65,8 +65,8 @@ const AchievementSection = () => {
   };
 
   return (
-    <div className='header_achievement'>
-         <div>
+    <div>
+         <div  className='header_achievement'>
         <h4> Achievements/Testimonials </h4>
     </div>
     <div id="achievement-section" className="achievement-section" ref={sectionRef}>
@@ -75,16 +75,16 @@ const AchievementSection = () => {
       </div>
       <div className="text-content">
         <div className="achievement-item">
-          <h5>Number of Clients</h5>
-          <p>{numberClients}</p>
+          <h5 className='number_text'>Number of Clients</h5>
+          <p className='numbers'>{numberClients}+</p>
         </div>
         <div className="achievement-item">
-          <h5>Number of Employees</h5>
-          <p>{numberEmployees}</p>
+        <p className='numbers'>{numberEmployees}+</p>
+          <h5 className='number_text'>Number of Employees</h5>
         </div>
         <div className="achievement-item">
-          <h5>Capital</h5>
-          <p>${capital}</p>
+          <h5 className='number_text'>Capital</h5>
+          <p className='numbers'>${capital}+</p>
         </div>
       </div>
     </div>
