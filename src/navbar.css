@@ -36,6 +36,7 @@
     padding:0;
 }
 .nav-links li {
+    font-family: '';
     margin-right: 20px;
 }
 
@@ -67,22 +68,29 @@
 
 .nav-links a {
     text-decoration: none;
-    color: white; /* Initial color */
+    color: #020205; /* Initial color */
     background-color: transparent !important; /* Initial background color */
     transition: color 0.3s ease, background-color 0.3s ease !important;
 }
 
-.nav-links a.scrolled {
+.nav-links li.scrolled {
     color: blue !important; /* Color when scrolled */
     background-color: transparent !important; /* Background color when scrolled */
     transition: color 0.3s ease !important;
 }
 
-.nav-links a.scrolled:hover{
+.nav-links li.scrolled:hover{
     color: rgb(8, 20, 61) !important; /* Color when scrolled */
 }
 
-
+.nav-links a.active {
+    color: #FFD369 !important; /* Yellow text color for the active/next appearing section */
+    background-color: transparent !important; /* Background color when active */
+  }
+  
+  .nav-links a.active:hover {
+    color: rgb(8, 20, 61) !important; /* Color when active on hover */
+  }
 
 
 

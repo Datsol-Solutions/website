@@ -14,6 +14,9 @@ import './ContactUs.css'; // Import your CSS file with styles
 import Logo from './logo.png'; // Import your logo image
 import ScrollButton from './ScrollButton';
 import Footer from './Footer';
+import WebFont from 'webfontloader';
+
+
 
 export default function App() {
   const emailRef = useRef();
@@ -95,26 +98,34 @@ export default function App() {
     <Router>
       <Navibar />
       <ScrollButton/>
-      <div>
+        <section id="home">
+          <div>
         <BackgroundVideo />
       </div>
-      <div>
+        </section>
+        <section id="about">
+          <div>
         <AboutUsPage />
       </div>
       <div>
         <ParallaxEffect />
       </div>
-      <div>
+        </section>
+        <section id="services">
+<div>
         <Achievement />
       </div>
       
       <div className="App">
         <Carousel cards={cardsData} />
       </div>
-      <div>
+      </section>
+      <section  id="ourteam">
+        <div>
         <OurTeam />
       </div>
-      <div className="contact-us-container">
+      </section>
+        <div className="contact-us-container">
         <div className="logo-container">
           <img src={Logo} alt="Logo" className="logo" />
         </div>
@@ -138,6 +149,7 @@ export default function App() {
           </form>
         </div>
       </div>
+    
       <Footer/>
     </Router>
   );

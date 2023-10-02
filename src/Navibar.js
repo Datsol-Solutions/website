@@ -4,6 +4,7 @@ import logo from './logo.png';
 
 function Navibar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     // Function to handle scroll event
@@ -12,6 +13,28 @@ function Navibar() {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
+      }
+
+      // Detect the active section based on scroll position
+      const homeSection = document.getElementById('home');
+      const aboutSection = document.getElementById('about');
+      const servicesSection = document.getElementById('services');
+      const contactSection = document.getElementById('ourteam');
+
+      if (
+        contactSection && window.scrollY >= contactSection.offsetTop
+      ) {
+        setActiveSection('ourteam');
+      } else if (
+        servicesSection && window.scrollY >= servicesSection.offsetTop
+      ) {
+        setActiveSection('services');
+      } else if (
+        aboutSection && window.scrollY >= aboutSection.offsetTop
+      ) {
+        setActiveSection('about');
+      } else {
+        setActiveSection('home');
       }
     };
 
@@ -30,13 +53,14 @@ function Navibar() {
         <img src={logo} alt='Your Company Logo' />
       </div>
       <ul className="link-list nav-links">
-        <li><a className={isScrolled ? 'scrolled' : ''} href="/">Home</a></li>
-        <li><a className={isScrolled ? 'scrolled' : ''} href="/about">About Us</a></li>
-        <li><a className={isScrolled ? 'scrolled' : ''} href="/services">Area Of Expertise</a></li>
-        <li><a className={isScrolled ? 'scrolled' : ''} href="/contact">Our Team</a></li>
+        <li className={isScrolled ? 'scrolled' : ''} href="/"><a className={activeSection === 'home' ? 'active' : ''} href="#home">Home</a></li>
+        <li className={isScrolled ? 'scrolled' : ''} href="about"><a className={activeSection === 'about' ? 'active' : ''} href="#about">About Us</a></li>
+        <li  className={isScrolled ? 'scrolled' : ''} href="services"><a className={activeSection === 'services' ? 'active' : ''} href="#services">Area Of Expertise</a></li>
+        <li  className={isScrolled ? 'scrolled' : ''} href="ourteam"><a className={activeSection === 'ourteam' ? 'active' : ''} href="ourteam">Our Team</a></li>
       </ul>
     </nav>
   );
 }
 
 export default Navibar;
+
