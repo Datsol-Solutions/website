@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ServiceCard from './Card';
 import './Carousel.css';
+import PropTypes from 'prop-types';
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
 };
@@ -25,6 +26,11 @@ function Carousel({ cards }) {
 
   const translateValue = -activeIndex * 33.33;
 
+  Carousel.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    imageSrc: PropTypes.string.isRequired,
+  };
   return (
     <div
       className="carousel-container"
@@ -46,5 +52,7 @@ function Carousel({ cards }) {
     </div>
   );
 }
-
+Carousel.propTypes = {
+  cards: PropTypes.array.isRequired,
+};
 export default Carousel;
