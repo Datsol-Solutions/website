@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './AboutUs.css';
+import PropTypes from 'prop-types';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const boxesData = [
   {
@@ -19,25 +23,23 @@ const boxesData = [
   },
 ];
 
-function Box({ image, heading, text, delay }) {
-  const [isVisible, setIsVisible] = useState(false);
-
+function Box({ image, heading, text, delay, animation }) {
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
-
-    return () => clearTimeout(timeout);
-  }, [delay]);
+    AOS.init({
+      duration: 1000, // Adjust the animation duration as needed
+      once: false, // Set to true if you want animations to occur only once
+    });
+  }, []);
 
   return (
     <div
-      className={`box fade-${isVisible ? 'in' : 'out'}`}
+      className={`box ${animation}`}
       style={{ animationDelay: `${delay}ms` }}
+      data-aos={animation}
     >
-      <img src={image} alt={heading} />
-      <h2>{heading}</h2>
-      <p>{text}</p>
+      <img src={image} alt={heading} data-aos="fade-up" />
+      <h2 data-aos="fade-up">{heading}</h2>
+      <p data-aos="fade-up">{text}</p>
     </div>
   );
 }
@@ -52,10 +54,18 @@ function AboutUs() {
           heading={box.heading}
           text={box.text}
           delay={index * 1000} // Adjust the delay as needed
+          animation={index === 1 ? 'fade-right' : 'fade-left'}
         />
       ))}
     </div>
   );
 }
-
+Box.propTypes = {
+  image: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  delay: PropTypes.number.isRequired,
+  animationDirection: PropTypes.string.isRequired,
+  animation: PropTypes.string.isRequired,
+};
 export default AboutUs;
