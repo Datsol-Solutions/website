@@ -14,9 +14,6 @@ import './ContactUs.css'; // Import your CSS file with styles
 import Logo from './logo.png'; // Import your logo image
 import ScrollButton from './ScrollButton';
 import Footer from './Footer';
-import WebFont from 'webfontloader';
-
-
 
 export default function App() {
   const emailRef = useRef();
@@ -73,7 +70,7 @@ export default function App() {
   ];
 
   useEffect(() => {
-    emailjs.init("2WofZQzBCpYkpNIJI");//public key
+    emailjs.init("2WofZQzBCpYkpNIJI"); // public key
   }, []);
 
   const handleSubmit = async (e) => {
@@ -97,39 +94,37 @@ export default function App() {
   return (
     <Router>
       <Navibar />
-      <ScrollButton/>
-        <section id="home">
-          <div>
-        <BackgroundVideo />
-      </div>
-        </section>
-        <section id="about">
-          <div>
-        <AboutUsPage />
-      </div>
-      <div>
-        <ParallaxEffect />
-      </div>
-        </section>
-        <section id="services">
-<div>
-        <Achievement />
-      </div>
-      
-      <div className="App">
-        <Carousel cards={cardsData} />
-      </div>
-      </section>
-      <section  id="ourteam">
+      <ScrollButton />
+      <section id="home">
         <div>
-        <OurTeam />
-      </div>
+          <BackgroundVideo />
+        </div>
       </section>
-        <div className="contact-us-container">
+      <section id="about">
+        <div>
+          <AboutUsPage />
+        </div>
+        <div>
+          <ParallaxEffect />
+        </div>
+      </section>
+      <section id="services">
+        <div>
+          <Achievement />
+        </div>
+        <div className="App">
+          <Carousel cards={cardsData} />
+        </div>
+      </section>
+      <section id="ourteam">
+        <div>
+          <OurTeam />
+        </div>
+      </section>
+      <div className="contact-us-container">
         <div className="logo-container">
           <img src={Logo} alt="Logo" className="logo" />
         </div>
-        {/* <aside></aside> */}
         <div className="form-container">
           <h2>Contact Us</h2>
           <form className="for" onSubmit={handleSubmit}>
@@ -138,8 +133,8 @@ export default function App() {
               <input ref={nameRef} type="text" id="name" placeholder="Enter your name" required />
             </div>
             <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input ref={emailRef} type="email" id="email" placeholder="Enter your email" required/>
+              <label htmlFor="email">Email</label>
+              <input ref={emailRef} type="email" id="email" placeholder="Enter your email" required />
             </div>
             <div className="form-group">
               <button className="btn" disabled={loading} type="submit">
@@ -149,8 +144,7 @@ export default function App() {
           </form>
         </div>
       </div>
-    
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
