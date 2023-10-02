@@ -45,7 +45,7 @@ function ContactUs() {
       </div>
       <div className="form-container">
         <h2 style={style1}>Contact Us</h2>
-        <form className="for" onSubmit={handleSubmit}>
+        {/* <form className="for" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name" style={style1}>Name:</label>
             <input ref={nameRef} style={style2} type="text" id="name" placeholder="Enter your name" required />
@@ -59,7 +59,9 @@ function ContactUs() {
               Submit
             </button>
           </div>
-        </form>
+        </form> */}
+        {/* Add your Google Form iframe below */}
+        <iframe className='details' src="https://docs.google.com/forms/d/e/1FAIpQLSeUeI-rZNLGRgXGROUu3oYwJ_bgfilMlqlRw5dqzfSpj1mwgg/viewform?embedded=true" width="640" height="1212" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
       </div>
     </div>
   );
