@@ -6,7 +6,7 @@ import Navibar from './Navibar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import OurTeam from './OurTeam';
 import ParallaxEffect from './seperation';
-import AboutUsPage from './AboutUsPage';
+import AboutUs from './AboutUs';
 import Achievement from './Achievement';
 import Carousel from './Carousel';
 import ContactUs from './ContactUs';
@@ -74,7 +74,7 @@ export default function App() {
       </section>
       <section id="about">
         <div>
-          <AboutUsPage />
+          <AboutUs />
         </div>
         <div>
           <ParallaxEffect />

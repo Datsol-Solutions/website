@@ -1,7 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import './ContactUs.css'; // Import your CSS file with styles
 import Logo from './logo.png'; // Import your logo image
-import emailjs from '@emailjs/browser';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
@@ -12,27 +11,43 @@ const style2 = {
 };
 
 function ContactUs() {
-  const emailRef = useRef();
   const nameRef = useRef();
+  const emailRef = useRef();
+  const phoneRef = useRef(); // Add a reference for the phone number input
+  const queryRef = useRef(); // Add a reference for the query input
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    emailjs.init("2WofZQzBCpYkpNIJI"); // public key
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const serviceId = "service_scc5n2u";
-    const templateId = "template_4x1a0nq";
+
+    // Create an object to hold the form data
+    const formData = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      phone: phoneRef.current.value, // Get the phone number value
+      query: queryRef.current.value, // Get the query value
+    };
+
+    // Send the formData object to your Google Sheets using a fetch request or any preferred method
     try {
       setLoading(true);
-      await emailjs.send(serviceId, templateId, {
-        name: nameRef.current.value,
-        recipient: emailRef.current.value,
+
+      // Use the fetch API to send the form data to your server or Google Sheets
+      const response = await fetch('/api/submit-contact-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      alert("Email successfully sent. Check your inbox.");
+
+      if (response.ok) {
+        alert('Thank you for contacting us!'); // Display a success message
+      } else {
+        alert('Something went wrong. Please try again later.'); // Display an error message
+      }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     } finally {
       setLoading(false);
     }
@@ -45,7 +60,7 @@ function ContactUs() {
       </div>
       <div className="form-container">
         <h2 style={style1}>Contact Us</h2>
-        {/* <form className="for" onSubmit={handleSubmit}>
+        <form className="for" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name" style={style1}>Name:</label>
             <input ref={nameRef} style={style2} type="text" id="name" placeholder="Enter your name" required />
@@ -55,13 +70,19 @@ function ContactUs() {
             <input ref={emailRef} style={style2} type="email" id="email" placeholder="Enter your email" required />
           </div>
           <div className="form-group">
+            <label htmlFor="phone" style={style1}>Phone Number:</label>
+            <input ref={phoneRef} style={style2} type="tel" id="phone" placeholder="Enter your phone number" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="query" style={style1}>Query:</label>
+            <textarea ref={queryRef} style={style2} id="query" placeholder="Enter your query" rows="4" required />
+          </div>
+          <div className="form-group">
             <button className="btn" style={style1} disabled={loading} type="submit">
               Submit
             </button>
           </div>
-        </form> */}
-        {/* Add your Google Form iframe below */}
-        <iframe className='details' src="https://docs.google.com/forms/d/e/1FAIpQLSeUeI-rZNLGRgXGROUu3oYwJ_bgfilMlqlRw5dqzfSpj1mwgg/viewform?embedded=true" width="640" height="1212" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+        </form>
       </div>
     </div>
   );

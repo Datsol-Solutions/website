@@ -1,45 +1,61 @@
+// server.js
+
 const express = require('express');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-
+const { google } = require('googleapis');
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 3000;
 
-// Middleware
-app.use(cors());
 app.use(bodyParser.json());
 
-// Configure nodemailer with your email service provider
-const transporter = nodemailer.createTransport({
-  service: 'your-email-service-provider', // e.g., 'Gmail'
-  auth: {
-    user: 'your-email@example.com',
-    pass: 'your-email-password',
-  },
+// Set up Google Sheets API
+const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
+const spreadsheetId = '1XPE7D7GDNYRijkm_ZrrNQvVlRAxV4EViFkNXeIXeB34'; // Replace with your Google Sheets document ID
+
+const sheets = google.sheets('v4');
+const sheetsAuth = new google.auth.GoogleAuth({
+  keyFile: 'datsol-38eb4e32a2c7.json', // Replace with the path to your JSON key file
+  scopes: SCOPES,
 });
 
-// Define an API endpoint for sending emails
-app.post('/sendEmail', async (req, res) => {
-  const { name, email, message } = req.body;
-
+// Define a route to handle form submissions
+app.post('/api/submit-contact-form', async (req, res) => {
   try {
-    // Send email
-    await transporter.sendMail({
-      from: 'your-email@example.com',
-      to: email,
-      subject: 'Subject of the Email',
-      text: `Dear ${name},\n\n${message}`,
+    // Extract form data from the request body
+    const { name, email, phone, query } = req.body;
+
+    // Authenticate with Google Sheets API
+    const auth = await sheetsAuth.getClient();
+
+    // Append the form data to the Google Sheets
+    const values = [[name, email, phone, query]];
+    const sheetsResponse = await sheets.spreadsheets.values.append({
+      auth,
+      spreadsheetId,
+      range: 'DATSOL contact us', // Replace with your sheet name or range
+      valueInputOption: 'USER_ENTERED',
+      resource: {
+        values,
+      },
     });
 
-    res.json({ success: true, message: 'Email sent successfully' });
+    // Check if the data was successfully appended
+    if (sheetsResponse.status === 200) {
+      console.log('Data appended to Google Sheets.');
+      // Send a success response to the client
+      res.status(200).send('Form submitted successfully.');
+    } else {
+      console.error('Error appending data to Google Sheets.');
+      // Send an error response to the client
+      res.status(500).send('Error submitting the form.');
+    }
   } catch (error) {
-    console.error('Error sending email:', error);
-    res.status(500).json({ success: false, message: 'Failed to send email' });
+    console.error(error);
+    res.status(500).send('Error submitting the form.');
   }
 });
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
