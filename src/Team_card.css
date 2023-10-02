@@ -1,9 +1,11 @@
 .card {
-    width: 190px;
-    height: 254px;
+    width: 180px;
+    height: 17%;
     background: #f5f5f5;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     transition: box-shadow .3s ease, transform .2s ease;
+    background-color: #FDFDFA;
+    box-shadow:#68869A 1px 4px 10px;
    }
    
    .card-info {
@@ -53,20 +55,21 @@
    
    /*Text*/
    .card-title {
-    color: #333;
-    font-size: 1.5em;
+    font-size: 1.1em;
+    color:#081F37;
     font-weight: 600;
     line-height: 2rem;
    }
    
    .card-subtitle {
-    color: #859ba8;
+    color: #68869A;
     font-size: 0.8em;
    }
    
    /*Hover*/
    .card:hover {
-    box-shadow: 0 8px 50px #23232333;
+    box-shadow: 2px 8px 50px #23232333;
+    border: none;
    }
    
    .card:hover .card-info {
@@ -75,7 +78,8 @@
    
    .card:hover .card-social {
     transform: translateY(100%);
-    opacity: 1;
+    opacity: 0.8;
+    
    }
    
    .card-social__item svg:hover {
@@ -85,4 +89,36 @@
    
    .card-avatar:hover {
     transform: scale(1.1);
+   }
+
+   @media only screen and (max-width: 700px) 
+   {
+
+    .card{
+     width:130px;
+     height:12%;
+    }
+    .card-avatar {
+        --size: 30px;
+        border-radius: 50%;
+        margin-bottom:0.8rem;
+       }
+    .card-social__item svg {
+        height: 10px;
+        width: 10px;
+       
+       }
+       /*Text*/
+       .card-title {
+        font-size: 0.8em;
+        color:#081F37;
+        font-weight: 600;
+        line-height: 1.2rem;
+       }
+       
+       .card-subtitle {
+        color: #68869A;
+        font-size: 0.5em;
+       }
+
    }
