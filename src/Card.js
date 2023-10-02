@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function ServiceCard({ title, description, imageSrc }) {
   return (
@@ -10,4 +12,11 @@ function ServiceCard({ title, description, imageSrc }) {
   );
 }
 
+ServiceCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
+};
+
 export default ServiceCard;
+
