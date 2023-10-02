@@ -18,17 +18,22 @@ function Navibar() {
       // Detect the active section based on scroll position
       const homeSection = document.getElementById('home');
       const aboutSection = document.getElementById('about');
+      const achievementsSection = document.getElementById('achievements');
       const servicesSection = document.getElementById('services');
-      const contactSection = document.getElementById('ourteam');
+      const teamSection = document.getElementById('ourteam');
 
-      if (
-        contactSection && window.scrollY >= contactSection.offsetTop
+       if (
+        teamSection && window.scrollY >= teamSection.offsetTop
       ) {
         setActiveSection('ourteam');
       } else if (
         servicesSection && window.scrollY >= servicesSection.offsetTop
       ) {
         setActiveSection('services');
+      }else if (
+        achievementsSection && window.scrollY >= achievementsSection.offsetTop
+      ) {
+        setActiveSection('achievements');
       } else if (
         aboutSection && window.scrollY >= aboutSection.offsetTop
       ) {
@@ -55,7 +60,8 @@ function Navibar() {
       <ul className="link-list nav-links">
         <li className={isScrolled ? 'scrolled' : ''} href="/"><a className={activeSection === 'home' ? 'active' : ''} href="#home">Home</a></li>
         <li className={isScrolled ? 'scrolled' : ''} href="about"><a className={activeSection === 'about' ? 'active' : ''} href="#about">About Us</a></li>
-        <li  className={isScrolled ? 'scrolled' : ''} href="services"><a className={activeSection === 'services' ? 'active' : ''} href="#services">Area Of Expertise</a></li>
+        <li  className={isScrolled ? 'scrolled' : ''} href="achievements"><a className={activeSection === 'achievements' ? 'active' : ''} href="#achievements">Achievements</a></li>
+        <li  className={isScrolled ? 'scrolled' : ''} href="services"><a className={activeSection === 'services' ? 'active' : ''} href="#services">Our Services</a></li>
         <li  className={isScrolled ? 'scrolled' : ''} href="ourteam"><a className={activeSection === 'ourteam' ? 'active' : ''} href="ourteam">Our Team</a></li>
       </ul>
     </nav>
