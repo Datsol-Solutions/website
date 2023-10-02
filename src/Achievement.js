@@ -2,6 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Achievement.css';
 import worldmap from './worldmap.gif';
 
+const style1 = {
+  fontFamily: 'Rokkitt, sans-serif',
+};
+
+const style2 = {
+  fontFamily: 'IBM Plex Sans, sans-serif',
+};
+
 const AchievementSection = () => {
   const [numberClients, setNumberClients] = useState(0);
   const [numberEmployees, setNumberEmployees] = useState(0);
@@ -67,7 +75,7 @@ const AchievementSection = () => {
   return (
     <div>
          <div  className='header_achievement'>
-        <h4> Achievements/Testimonials </h4>
+        <h4 style={style1}> Achievements/Testimonials </h4>
     </div>
     <div id="achievement-section" className="achievement-section" ref={sectionRef}>
       <div className="map-gif">
@@ -75,15 +83,15 @@ const AchievementSection = () => {
       </div>
       <div className="text-content">
         <div className="achievement-item">
-          <h5 className='number_text'>Number of Clients</h5>
+          <h5 className='number_text' style={style2}>Number of Clients</h5>
           <p className='numbers'>{numberClients}+</p>
         </div>
         <div className="achievement-item">
         <p className='numbers'>{numberEmployees}+</p>
-          <h5 className='number_text'>Number of Employees</h5>
+          <h5 className='number_text' style={style2}>Number of Employees</h5>
         </div>
         <div className="achievement-item">
-          <h5 className='number_text'>Capital</h5>
+          <h5 className='number_text' style={style2}>Capital</h5>
           <p className='numbers'>${capital}+</p>
         </div>
       </div>

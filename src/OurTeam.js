@@ -1,6 +1,13 @@
 import React from 'react';
 import Teamcard from './Team_card'; // Import the Card component
 import './OurTeam.css'; // Import your CSS file
+const style1 = {
+  fontFamily: 'Rokkitt, sans-serif',
+};
+
+const style2 = {
+  fontFamily: 'IBM Plex Sans, sans-serif',
+};
 function OurTeam() {
   const teamData = [
     {
@@ -38,8 +45,8 @@ function OurTeam() {
   return (
     <section>
     <div className="our-team">
-      <h1>Our Team</h1>
-      <div className="team-cards">
+      <h1 style={style1}>Our Team</h1>
+      <div style={style2} className="team-cards">
         {teamData.map((teamMember) => (
           <Teamcard
             key={teamMember.id}
