@@ -65,7 +65,10 @@ export default function App() {
 
   return (
     <Router>
+      <div className='navigation-bar abc'>
       <Navibar />
+      </div>
+      <div className='rest-content abc'>
       <ScrollButton />
       <section id="home">
         <div>
@@ -101,6 +104,7 @@ export default function App() {
         </div>
       </section>
       <Footer />
+      </div>
     </Router>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
 import logo from './logo.png';
+
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
 };
@@ -29,21 +30,19 @@ function Navibar() {
       const servicesSection = document.getElementById('services');
       const teamSection = document.getElementById('ourteam');
 
-       if (
-        teamSection && window.scrollY >= teamSection.offsetTop
-      ) {
+      if (teamSection && window.scrollY >= teamSection.offsetTop) {
         setActiveSection('ourteam');
       } else if (
-        servicesSection && window.scrollY >= servicesSection.offsetTop
+        servicesSection &&
+        window.scrollY >= servicesSection.offsetTop
       ) {
         setActiveSection('services');
-      }else if (
-        achievementsSection && window.scrollY >= achievementsSection.offsetTop
+      } else if (
+        achievementsSection &&
+        window.scrollY >= achievementsSection.offsetTop
       ) {
         setActiveSection('achievements');
-      } else if (
-        aboutSection && window.scrollY >= aboutSection.offsetTop
-      ) {
+      } else if (aboutSection && window.scrollY >= aboutSection.offsetTop) {
         setActiveSection('about');
       } else {
         setActiveSection('home');
@@ -59,21 +58,62 @@ function Navibar() {
     };
   }, []);
 
+  const handleNavLinkClick = (sectionId) => {
+    // Scroll to the section when a navigation link is clicked
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth', // Smooth scrolling
+      });
+    }
+  };
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="logo">
         <img src={logo} alt='Your Company Logo' />
       </div>
       <ul className="link-list nav-links" style={style2}>
-        <li className={isScrolled ? 'scrolled' : ''} href="/"><a className={activeSection === 'home' ? 'active' : ''} href="#home">Home</a></li>
-        <li className={isScrolled ? 'scrolled' : ''} href="about"><a className={activeSection === 'about' ? 'active' : ''} href="#about">About Us</a></li>
-        <li  className={isScrolled ? 'scrolled' : ''} href="achievements"><a className={activeSection === 'achievements' ? 'active' : ''} href="#achievements">Achievements</a></li>
-        <li  className={isScrolled ? 'scrolled' : ''} href="services"><a className={activeSection === 'services' ? 'active' : ''} href="#services">Our Services</a></li>
-        <li  className={isScrolled ? 'scrolled' : ''} href="ourteam"><a className={activeSection === 'ourteam' ? 'active' : ''} href="ourteam">Our Team</a></li>
+        <li
+          className={isScrolled ? 'scrolled' : ''}
+          onClick={() => handleNavLinkClick('home')}
+        >
+          <a className={activeSection === 'home' ? 'active' : ''}>Home</a>
+        </li>
+        <li
+          className={isScrolled ? 'scrolled' : ''}
+          onClick={() => handleNavLinkClick('about')}
+        >
+          <a className={activeSection === 'about' ? 'active' : ''}>About Us</a>
+        </li>
+        <li
+          className={isScrolled ? 'scrolled' : ''}
+          onClick={() => handleNavLinkClick('achievements')}
+        >
+          <a className={activeSection === 'achievements' ? 'active' : ''}>
+            Achievements
+          </a>
+        </li>
+        <li
+          className={isScrolled ? 'scrolled' : ''}
+          onClick={() => handleNavLinkClick('services')}
+        >
+          <a className={activeSection === 'services' ? 'active' : ''}>
+            Our Services
+          </a>
+        </li>
+        <li
+          className={isScrolled ? 'scrolled' : ''}
+          onClick={() => handleNavLinkClick('ourteam')}
+        >
+          <a className={activeSection === 'ourteam' ? 'active' : ''}>
+            Our Team
+          </a>
+        </li>
       </ul>
     </nav>
   );
 }
 
 export default Navibar;
-

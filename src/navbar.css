@@ -2,87 +2,92 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-/* Navbar styles */
-.navbar {
-    position: fixed !important; 
-    width : 100%;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    position: fixed !important;
+    width: 100%;
     top: 0;
     color: #fff;
-    font-weight:bold ;
+    font-weight: bold;
     z-index: 100;
-    background-color: rgba(0, 0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.2s ease, color 0.2s ease !important; /* Smooth transition effect */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-}
-.scrolled {
+  }
+  
+  .scrolled {
     background-color: #fff !important; /* White background color when scrolled */
-    color:blue !important;
+    color: blue !important;
     transition: background-color 0.2s ease, color 0.3s ease !important;
   }
-.logo img {
+  
+  .logo img {
     margin-left: 10px;
     width: 15%; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    padding:0;
-}
-.nav-links li {
+    padding: 0;
+  }
+  
+  .nav-links li {
     margin-right: 20px;
-}
-
-.nav-links a:hover {
+  }
+  
+  .nav-links a:hover {
     color: #220b76; /* Change the color on hover */
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
+  
     .logo {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
     }
-
+  
     .nav-links {
-        flex-direction: column;
+      flex-direction: column;
     }
-
+  
     .nav-links li {
-        margin-right: 0;
-        margin-bottom: 10px;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
-}
-/* ... Your existing styles ... */
-
-.nav-links a {
+  }
+  
+  /* Your existing styles... */
+  
+  .nav-links a {
     text-decoration: none;
     color: #020205; /* Initial color */
     background-color: transparent !important; /* Initial background color */
     transition: color 0.3s ease, background-color 0.3s ease !important;
-}
-
-.nav-links li.scrolled {
+  }
+  
+  .nav-links li.scrolled {
     color: blue !important; /* Color when scrolled */
     background-color: transparent !important; /* Background color when scrolled */
     transition: color 0.3s ease !important;
-}
-
-.nav-links li.scrolled:hover{
+  }
+  
+  .nav-links li.scrolled:hover {
     color: rgb(8, 20, 61) !important; /* Color when scrolled */
-}
-
-.nav-links a.active {
+  }
+  
+  .nav-links a.active {
     color: #FFD369 !important; /* Yellow text color for the active/next appearing section */
     background-color: transparent !important; /* Background color when active */
   }
@@ -90,11 +95,4 @@
   .nav-links a.active:hover {
     color: rgb(8, 20, 61) !important; /* Color when active on hover */
   }
-
-
-
-
-
-
-
-
+  
