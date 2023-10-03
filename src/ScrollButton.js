@@ -1,4 +1,3 @@
-// ScrollButton.js
 import React, { useState, useEffect } from 'react';
 import './ScrollButton.css';
 
@@ -23,18 +22,18 @@ const ScrollButton = () => {
     };
   }, []);
 
-  // Function to scroll to the bottom when the button is clicked
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth',
-    });
+  // Function to scroll to the contact section when the button is clicked
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact'); // Replace 'contact' with the actual ID of your contact section
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <div
       className={`scroll-button ${showButton ? 'show' : ''} ${isHovered ? 'hovered' : ''}`}
-      onClick={scrollToBottom}
+      onClick={scrollToContact} // Call the scrollToContact function
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
