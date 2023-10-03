@@ -31,11 +31,6 @@ function Carousel({ cards }) {
   const screenWidth = 80; // Total screen width in percentage
   const translateValue = -(activeIndex * cardWidth) + 26.66; // Adjusted translateValue
 
-  Carousel.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    imageSrc: PropTypes.string.isRequired,
-  };
   return (
     <div
       className="carousel-container"
@@ -57,7 +52,8 @@ function Carousel({ cards }) {
     </div>
   );
 }
-// Add prop type validation
+
+// Combined PropTypes definition
 Carousel.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
@@ -65,4 +61,5 @@ Carousel.propTypes = {
     imageSrc: PropTypes.string.isRequired,
   })).isRequired,
 };
+
 export default Carousel;
