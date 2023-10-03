@@ -7,14 +7,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
-    "bootstrap": "^5.3.2",
-=======
     "aos": "^2.3.4",
     "axios": "^1.5.1",
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.1",
->>>>>>> 6e89ec82f1246fc2b8e06f3c44077a99442b2864
     "emailjs-com": "^3.2.0",
     "express": "^4.18.2",
     "google-spreadsheet": "^4.1.0",

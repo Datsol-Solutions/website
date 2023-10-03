@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ServiceCard from './Card';
 import './Carousel.css';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
 
-=======
->>>>>>> 6e89ec82f1246fc2b8e06f3c44077a99442b2864
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
 };
@@ -34,11 +31,6 @@ function Carousel({ cards }) {
   const screenWidth = 80; // Total screen width in percentage
   const translateValue = -(activeIndex * cardWidth) + 26.66; // Adjusted translateValue
 
-  Carousel.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    imageSrc: PropTypes.string.isRequired,
-  };
   return (
     <div
       className="carousel-container"
@@ -60,17 +52,14 @@ function Carousel({ cards }) {
     </div>
   );
 }
-<<<<<<< HEAD
-// Add prop type validation
+
+// Combined PropTypes definition
 Carousel.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     imageSrc: PropTypes.string.isRequired,
   })).isRequired,
-=======
-Carousel.propTypes = {
-  cards: PropTypes.array.isRequired,
->>>>>>> 6e89ec82f1246fc2b8e06f3c44077a99442b2864
 };
+
 export default Carousel;
