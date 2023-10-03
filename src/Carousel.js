@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ServiceCard from './Card';
 import './Carousel.css';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
 
-=======
->>>>>>> 6e89ec82f1246fc2b8e06f3c44077a99442b2864
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
 };
@@ -60,7 +57,6 @@ function Carousel({ cards }) {
     </div>
   );
 }
-<<<<<<< HEAD
 // Add prop type validation
 Carousel.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({
@@ -68,9 +64,5 @@ Carousel.propTypes = {
     description: PropTypes.string.isRequired,
     imageSrc: PropTypes.string.isRequired,
   })).isRequired,
-=======
-Carousel.propTypes = {
-  cards: PropTypes.array.isRequired,
->>>>>>> 6e89ec82f1246fc2b8e06f3c44077a99442b2864
 };
 export default Carousel;
