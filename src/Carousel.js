@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import ServiceCard from './Card';
 import './Carousel.css';
+import PropTypes from 'prop-types';
+
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
 };
 
-const style2 = {
-  fontFamily: 'IBM Plex Sans, sans-serif',
-};
-
 function Carousel({ cards }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
+
+  // Ensure at least 3 cards are in the array
+  if (cards.length < 3) {
+    cards = [...cards, ...cards, ...cards]; // Duplicate cards to ensure at least 3
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +26,10 @@ function Carousel({ cards }) {
     return () => clearInterval(interval);
   }, [cards, isHovered]);
 
-  const translateValue = -activeIndex * 33.33;
+  // Calculate translateValue to achieve the desired layout
+  const cardWidth = 26.66; // Width of each card in percentage
+  const screenWidth = 80; // Total screen width in percentage
+  const translateValue = -(activeIndex * cardWidth) + 26.66; // Adjusted translateValue
 
   return (
     <div
@@ -31,7 +37,7 @@ function Carousel({ cards }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-    <h2 style={style1}> Our Services </h2>
+      <h2 style={style1}> Our Services </h2>
       <div className="carousel" style={{ transform: `translateX(${translateValue}%)` }}>
         {cards.map((card, index) => (
           <ServiceCard
@@ -46,5 +52,12 @@ function Carousel({ cards }) {
     </div>
   );
 }
-
+// Add prop type validation
+Carousel.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    imageSrc: PropTypes.string.isRequired,
+  })).isRequired,
+};
 export default Carousel;
