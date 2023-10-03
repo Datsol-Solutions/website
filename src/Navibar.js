@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
 import logo from './logo.png';
+const style1 = {
+  fontFamily: 'Rokkitt, sans-serif',
+};
+
+const style2 = {
+  fontFamily: 'IBM Plex Sans, sans-serif',
+};
 
 function Navibar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,7 +64,7 @@ function Navibar() {
       <div className="logo">
         <img src={logo} alt='Your Company Logo' />
       </div>
-      <ul className="link-list nav-links">
+      <ul className="link-list nav-links" style={style2}>
         <li className={isScrolled ? 'scrolled' : ''} href="/"><a className={activeSection === 'home' ? 'active' : ''} href="#home">Home</a></li>
         <li className={isScrolled ? 'scrolled' : ''} href="about"><a className={activeSection === 'about' ? 'active' : ''} href="#about">About Us</a></li>
         <li  className={isScrolled ? 'scrolled' : ''} href="achievements"><a className={activeSection === 'achievements' ? 'active' : ''} href="#achievements">Achievements</a></li>
