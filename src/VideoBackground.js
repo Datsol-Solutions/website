@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Video.css';
 import video from './media/bg1.mp4';
-import logo from './media/logo.png';
+import logo from './media/logo_b.png';
 
 const style2 = {
   fontFamily: 'IBM Plex Sans, sans-serif',

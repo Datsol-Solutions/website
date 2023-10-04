@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import logo from './media/logo.png';
+import logo from './media/logo_b.png';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',

@@ -79,12 +79,14 @@
 .card:hover .card-social {
     transform: translateY(100%);
     opacity: 0.8;
+    color: #68869A;
 
 }
 
 .card-social__item svg:hover {
-    fill: #232323;
+    fill: #ffd369;
     transform: scale(1.1);
+    
 }
 
 .card-avatar:hover {
