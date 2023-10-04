@@ -4,6 +4,7 @@ import worldmap from './worldmap.gif';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
+  margin: '5vw',
 };
 
 const style2 = {
@@ -75,7 +76,7 @@ const AchievementSection = () => {
   return (
     <div>
          <div  className='header_achievement'>
-        <h4 style={style1}> Achievements/Testimonials </h4>
+        <h1 style={style1}> Achievements/Testimonials </h1>
     </div>
     <div id="achievement-section" className="achievement-section" ref={sectionRef}>
       <div className="map-gif">

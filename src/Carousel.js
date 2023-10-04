@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
+  margin: '5vw',
 };
 
 function Carousel({ cards }) {
@@ -29,7 +30,7 @@ function Carousel({ cards }) {
   // Calculate translateValue to achieve the desired layout
   const cardWidth = 26.66; // Width of each card in percentage
   const screenWidth = 80; // Total screen width in percentage
-  const translateValue = -(activeIndex * cardWidth) + 26.66; // Adjusted translateValue
+  const translateValue = -(activeIndex * cardWidth) + 10; // Adjusted translateValue
 
   return (
     <div
@@ -37,7 +38,7 @@ function Carousel({ cards }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <h2 style={style1}> Our Services </h2>
+      <h1 style={style1}> Our Services </h1>
       <div className="carousel" style={{ transform: `translateX(${translateValue}%)` }}>
         {cards.map((card, index) => (
           <ServiceCard

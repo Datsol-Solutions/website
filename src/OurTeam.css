@@ -3,15 +3,15 @@
 .our-team {
     position:relative;
     text-align: center;
-    padding: 20px;
+    padding: 0 20px 70px 20px;
     z-index: 2;
     overflow-x: hidden;
     background-color: #FDFDFA;
   }
   
   .our-team h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    
+    margin: 5vw 0;
   }
   
   .team-cards {

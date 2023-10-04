@@ -2,6 +2,14 @@ import React from 'react';
 import './Team_card.css'; // Import your CSS file
 import PropTypes from 'prop-types';
 
+const style1 = {
+  fontFamily: 'Rokkitt, sans-serif',
+};
+
+const style2 = {
+  fontFamily: 'IBM Plex Sans, sans-serif',
+};
+
 function Teamcard(props) {
   return (
     <div className="card">

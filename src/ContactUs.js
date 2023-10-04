@@ -97,7 +97,7 @@ function ContactUs() {
         <img src={Logo} alt="Logo" className="logo" />
       </div>
       <div className="form-container">
-        <h2 style={style1}>Contact Us</h2>
+        <h1 style={style1}>Contact Us</h1>
         <form method="post" className="for" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name" style={style1}>
