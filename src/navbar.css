@@ -105,7 +105,7 @@ main .content {
   .mobile-menu-icon .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #020205;
     margin: 5px 0;
     transition: transform 0.3s ease;
   }
