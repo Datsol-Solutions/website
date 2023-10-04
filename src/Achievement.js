@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Achievement.css';
-import worldmap from './media/worldmap.gif';
+// import worldmap from './media/worldmap.gif';
+import WorldMap from "react-svg-worldmap";
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
@@ -17,6 +18,19 @@ const AchievementSection = () => {
   const [capital, setCapital] = useState(0);
   const [sectionAppeared, setSectionAppeared] = useState(false);
   const sectionRef = useRef(null);
+
+  const data = [
+    { country: "cn", value: 1389618778 }, // china
+    { country: "in", value: 1311559204 }, // india
+    { country: "us", value: 331883986 }, // united states
+    { country: "id", value: 264935824 }, // indonesia
+    { country: "pk", value: 210797836 }, // pakistan
+    { country: "br", value: 210301591 }, // brazil
+    { country: "ng", value: 208679114 }, // nigeria
+    { country: "bd", value: 161062905 }, // bangladesh
+    { country: "ru", value: 141944641 }, // russia
+    { country: "mx", value: 127318112 }, // mexico
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +94,13 @@ const AchievementSection = () => {
     </div>
     <div id="achievement-section" className="achievement-section" ref={sectionRef}>
       <div className="map-gif">
-        <img src={worldmap} alt="World Map" />
+      <WorldMap
+        color="Blue"
+        title="Our Clients"
+        value-suffix="people"
+        size="lg"
+        data={data}
+      />
       </div>
       <div className="text-content">
         <div className="achievement-item">

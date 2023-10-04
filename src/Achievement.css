@@ -6,16 +6,18 @@
   
   .map-gif {
     flex:1;
-    max-width: 100%;
+    width: auto;
     overflow: hidden;
     height:auto;
+    object-fit: cover;
+    padding-left: 7%;
   }
   
-  .map-gif img {
+  /* .map-gif img {
     width: 100%;
     height: auto;
     object-fit: cover;
-  }
+  } */
   
   .text-content {
     align-content: center;

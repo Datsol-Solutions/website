@@ -2,9 +2,11 @@
   overflow: hidden;
   width: 100%;
   max-width: 100vw;
-  height: 300px;
+  height: auto;
   position: relative;
   padding: 0 4%; /* Adjusted padding to 2% for 4% gap between cards */
+  z-index: 200;
+  padding-bottom:6%;
 }
 
 .carousel {
@@ -26,6 +28,7 @@
   transform: scale(1.1); /* Enlarge the card on hover */
   border: 2px solid rgb(228, 205, 69); /* Highlight the border on hover */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
+  z-index: 200;
 }
 
 .card2.active {
