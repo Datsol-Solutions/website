@@ -24,6 +24,14 @@ export default function BackgroundVideo() {
 
   const parallaxOffset = scrollPosition * 0.3; // Adjust the parallax effect strength as needed
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      const yOffset = contactSection.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: yOffset - 50, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="background-video-section">
       <div className="main" style={{ transform: `translateY(${parallaxOffset}px)` }}>
@@ -33,7 +41,9 @@ export default function BackgroundVideo() {
           <h1 style={style2}>Welcome to Our Website</h1>
         </div>
         <div className="button-container">
-          <button className="button button1">Contact Us</button>
+          <button className="button button1" onClick={scrollToContact}>
+            Contact Us
+          </button>
         </div>
       </div>
     </section>

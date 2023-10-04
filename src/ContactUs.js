@@ -92,7 +92,7 @@ function ContactUs() {
   */
 
   return (
-    <div className="contact-us-container">
+    <div id="contact" className="contact-us-container">
       <div className="logo-container">
         <img src={Logo} alt="Logo" className="logo" />
       </div>

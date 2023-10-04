@@ -26,7 +26,8 @@ const ScrollButton = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact'); // Replace 'contact' with the actual ID of your contact section
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      const yOffset = contactSection.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: yOffset - 50, behavior: 'smooth' });
     }
   };
 
