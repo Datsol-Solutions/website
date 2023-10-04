@@ -13,16 +13,11 @@ const style2 = {
 function Navibar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Function to handle scroll event
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-
       // Detect the active section based on scroll position
       const homeSection = document.getElementById('home');
       const aboutSection = document.getElementById('about');
@@ -30,22 +25,35 @@ function Navibar() {
       const servicesSection = document.getElementById('services');
       const teamSection = document.getElementById('ourteam');
 
-      if (teamSection && window.scrollY >= teamSection.offsetTop) {
+      if (
+        teamSection &&
+        window.scrollY >= teamSection.offsetTop - 60
+      ) {
         setActiveSection('ourteam');
       } else if (
         servicesSection &&
-        window.scrollY >= servicesSection.offsetTop
+        window.scrollY >= servicesSection.offsetTop - 60
       ) {
         setActiveSection('services');
       } else if (
         achievementsSection &&
-        window.scrollY >= achievementsSection.offsetTop
+        window.scrollY >= achievementsSection.offsetTop - 60
       ) {
         setActiveSection('achievements');
-      } else if (aboutSection && window.scrollY >= aboutSection.offsetTop) {
+      } else if (
+        aboutSection &&
+        window.scrollY >= aboutSection.offsetTop - 60
+      ) {
         setActiveSection('about');
       } else {
         setActiveSection('home');
+      }
+
+      // Check if the user has scrolled down a certain distance
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
       }
     };
 
@@ -63,10 +71,15 @@ function Navibar() {
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop,
+        top: section.offsetTop - 59,
         behavior: 'smooth', // Smooth scrolling
       });
+      setIsMobileMenuOpen(false); // Close mobile menu on link click
     }
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -74,7 +87,12 @@ function Navibar() {
       <div className="logo">
         <img src={logo} alt='Your Company Logo' />
       </div>
-      <ul className="link-list nav-links" style={style2}>
+      <div className={`mobile-menu-icon ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <ul className={`link-list nav-links ${isMobileMenuOpen ? 'open' : ''}`} style={style2}>
         <li
           className={isScrolled ? 'scrolled' : ''}
           onClick={() => handleNavLinkClick('home')}
