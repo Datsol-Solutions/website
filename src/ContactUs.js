@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ContactUs.css'; // Import your CSS file with styles
-import Logo from './logo.png'; // Import your logo image
+import Logo from './media/logo.png'; // Import your logo image
 import { GoogleSpreadsheet } from 'google-spreadsheet'; // Import the Google Spreadsheet library
 
 const style1 = {

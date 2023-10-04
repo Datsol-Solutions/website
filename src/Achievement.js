@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Achievement.css';
-import worldmap from './worldmap.gif';
+import worldmap from './media/worldmap.gif';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
