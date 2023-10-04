@@ -83,16 +83,17 @@ export default function App() {
           <ParallaxEffect />
         </div>
       </section>
-      <section id="achievements">
-        <div>
-          <Achievement />
-        </div>
-        </section>
+      
       <section id="services">
         <div className="App">
           <Carousel cards={cardsData} />
         </div>
       </section>
+      <section id="achievements">
+        <div>
+          <Achievement />
+        </div>
+        </section>
       <section id="ourteam">
         <div>
           <OurTeam />

@@ -1,6 +1,6 @@
 .background-video-section {
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -12,7 +12,7 @@
 
 .logoandtagline {
   position: absolute;
-  top: 50%;
+  top: 28vw;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -35,7 +35,7 @@ video {
 
 .button-container {
   position: absolute;
-  top: 35vw; /* Adjust the vertical position */
+  top: 38vw; /* Adjust the vertical position */
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -44,14 +44,15 @@ video {
   background-color: #FDFDFA;
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 1vw 2vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 0.5vw;
 }
 
 .button1 {
@@ -64,3 +65,5 @@ video {
   background-color: #ffd369;
   color: white;
 }
+
+
