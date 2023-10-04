@@ -5,7 +5,7 @@
   height: auto;
   position: relative;
   padding: 0 4%; /* Adjusted padding to 2% for 4% gap between cards */
-  z-index: 200;
+  z-index: 1;
   padding-bottom:6%;
 }
 
