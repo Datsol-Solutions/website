@@ -100,6 +100,7 @@ const AchievementSection = () => {
         value-suffix="people"
         size="lg"
         data={data}
+
       />
       </div>
       <div className="text-content">

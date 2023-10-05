@@ -1,59 +1,102 @@
 .achievement-section {
-    display: flex;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .map-gif {
-    flex:1;
-    width: auto;
-    overflow: hidden;
-    height:auto;
-    object-fit: cover;
-    padding-left: 7%;
-  }
-  
-  /* .map-gif img {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-gif {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  height: auto;
+  object-fit: cover;
+  /* padding-left: 7%; */
+  display: flex;
+  justify-content: center;
+}
+
+/* .map-gif img {
     width: 100%;
     height: auto;
     object-fit: cover;
   } */
-  
-  .text-content {
-    align-content: center;
-    padding-top: 7%;
-    width: 30%;
-    padding-left: 20px;
-    height:auto;
-    display:block;
-    justify-content: space-between;
-    background-color: #f2f2f2;
-  }
-  
+
+.text-content {
+  align-content: center;
+  padding-top: 7%;
+  width: 30%;
+  padding-left: 20px;
+  height: auto;
+  display: block;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+
+.achievement-item {
+  margin-bottom: 30px;
+  padding-left: 10%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+
+.numbers {
+  display: inline;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(14, 14, 143);
+  padding-right: 10px;
+}
+
+.header_achievement {
+  padding: 10px;
+  text-align: center;
+}
+
+.number_text {
+  display: inline;
+  padding: 0px 10px 0px 0px;
+}
+@media (max-width: 1100px) and (min-width: 768px) {
   .achievement-item {
-    margin-bottom: 30px;
-    padding-left: 10%;
-  }
+    padding-left: 0;
+    /* Remove left padding for items */
   
-  h3 {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-  }
-  
-  .numbers{
-    display: inline;
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(14, 14, 143);
-    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    /* Center-align items */
   }
 
-  .header_achievement{
-    padding:10px;
+}
+@media (max-width: 768px) {
+  .achievement-section {
+    flex-direction: column;
+    /* Stack elements vertically */
+  }
+
+  .map-gif {
+    padding: 0;
+    /* Remove left padding */
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-content {
+    width: 100%;
+    /* Full width for text content on smaller screens */
+    padding: 20px;
+    /* Add some padding for spacing */
+  }
+
+  .achievement-item {
+    padding-left: 0;
+    /* Remove left padding for items */
     text-align: center;
+    /* Center-align items */
   }
 
-  .number_text{
-    display: inline;
-    padding: 0px 10px 0px 10px;
-  }
+  
+}
