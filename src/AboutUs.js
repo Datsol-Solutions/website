@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './AboutUs.css';
 import PropTypes from 'prop-types';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import image3 from './media/How_we_help_you.jpg';
+import image1 from './media/Who_we_are.png';
+import image2 from './media/What_we_do.jpg';
 
 const boxesData = [
   {
-    image: 'image1.jpg',
+    image: image1,
     heading: 'Box 1',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
-    image: 'image2.jpg',
+    image: image2,
     heading: 'Box 2',
     text: 'Nulla quis lorem ut libero malesuada feugiat.',
   },
   {
-    image: 'image3.jpg',
+    image: image3,
     heading: 'Box 3',
     text: 'Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.',
   },
@@ -26,8 +28,8 @@ const boxesData = [
 function Box({ image, heading, text, delay, animation }) {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Adjust the animation duration as needed
-      once: false, // Set to true if you want animations to occur only once
+      duration: 1000,
+      once: false,
     });
   }, []);
 
@@ -37,7 +39,7 @@ function Box({ image, heading, text, delay, animation }) {
       style={{ animationDelay: `${delay}ms` }}
       data-aos={animation}
     >
-      <img src={image} alt={heading} data-aos="fade-up" />
+      <img className='images' src={image} alt={heading} data-aos="fade-up" />
       <h2 data-aos="fade-up">{heading}</h2>
       <p data-aos="fade-up">{text}</p>
     </div>
@@ -53,13 +55,14 @@ function AboutUs() {
           image={box.image}
           heading={box.heading}
           text={box.text}
-          delay={index * 1000} // Adjust the delay as needed
+          delay={index * 1000}
           animation={index === 1 ? 'fade-right' : 'fade-left'}
         />
       ))}
     </div>
   );
 }
+
 Box.propTypes = {
   image: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
@@ -68,4 +71,5 @@ Box.propTypes = {
   animationDirection: PropTypes.string.isRequired,
   animation: PropTypes.string.isRequired,
 };
+
 export default AboutUs;

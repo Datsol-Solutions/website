@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Video.css';
-import video from './media/bg1.mp4';
+import video from './media/background_HD.mp4';
 import logo from './media/logo_b.png';
 
 const style2 = {
