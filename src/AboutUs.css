@@ -10,17 +10,19 @@
 
 .box {
   width: 80%;
-  height: 30%;
+  height: 20vw;
   background-color: #fff;
   margin: 20px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  display: flex;
 }
 
 .box img {
   max-width: 100%;
   height: auto;
+  padding: 1%;
 }
 
 .box h2 {
