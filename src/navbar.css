@@ -21,6 +21,18 @@
   padding: 10px 20px;
 }
 
+/* Logo styles */
+.logo {
+  display: flex; /* Keep the logo and links on the same line */
+  align-items: center; /* Center vertically within the navbar */
+}
+
+.logo img {
+  margin-right: 10px; /* Add margin to the right of the logo */
+  width: auto;
+  height: 7vh;
+}
+
 /* Add a space after 'main' to target elements with the 'content' class inside 'main' */
 main .content {
   padding-top: 20vh; /* Adjust the value to match the height of your navbar */
@@ -32,16 +44,11 @@ main .content {
   transition: background-color 0.2s ease, color 0.3s ease !important;
 }
 
-.logo img {
-  margin-left: 10px;
-  width: 15%; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
 .nav-links {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 0;
 }
 
@@ -54,21 +61,25 @@ main .content {
 }
 
 /* Responsive styles */
-/* Responsive styles */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
 
   .logo {
     margin-bottom: 10px;
+    /* Keep the logo on the left side */
+    justify-content: flex-start;
+    margin-left: 20px; /* Add margin to the left of the logo */
+    width: auto; /* Adjust the width as needed */
   }
 
   .nav-links {
     flex-direction: column;
     display: none; /* Hide the links by default */
-    /* Remove the background-color property */
+    /* Set the background color to white */
+    background-color: #fff;
     position: absolute;
     top: 10vh;
     left: 0;
@@ -80,7 +91,8 @@ main .content {
     display: flex; /* Display the links when the mobile menu is open */
     flex-direction: column;
     align-items: flex-start;
-    /* Remove the background-color property */
+    /* Set the background color to white */
+    background-color: #fff;
   }
 
   .nav-links li {
