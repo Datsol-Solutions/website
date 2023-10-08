@@ -58,6 +58,7 @@ function Box({ image, heading, text, delay, animation }) {
 function AboutUs() {
   return (
     <div className="container">
+      <h1 style={style1}>About Us</h1>
       {boxesData.map((box, index) => (
         <Box
           key={index}

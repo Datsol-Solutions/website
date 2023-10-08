@@ -25,24 +25,21 @@ function Navibar() {
       const servicesSection = document.getElementById('services');
       const teamSection = document.getElementById('ourteam');
 
-      if (
-        teamSection &&
-        window.scrollY >= teamSection.offsetTop - 60
-      ) {
+      if (teamSection && window.scrollY >= teamSection.offsetTop - 100) {
         setActiveSection('ourteam');
       } else if (
         servicesSection &&
-        window.scrollY >= servicesSection.offsetTop - 60
+        window.scrollY >= servicesSection.offsetTop - 100
       ) {
         setActiveSection('services');
       } else if (
         achievementsSection &&
-        window.scrollY >= achievementsSection.offsetTop - 60
+        window.scrollY >= achievementsSection.offsetTop - 100
       ) {
         setActiveSection('achievements');
       } else if (
         aboutSection &&
-        window.scrollY >= aboutSection.offsetTop - 60
+        window.scrollY >= aboutSection.offsetTop - 100
       ) {
         setActiveSection('about');
       } else {
@@ -70,14 +67,26 @@ function Navibar() {
     // Scroll to the section when a navigation link is clicked
     const section = document.getElementById(sectionId);
     if (section) {
+      // Calculate the offset based on the height of the navbar
+      const offset = sectionId === 'about' ? 59 : 0; // Adjust the offset for the "About Us" section
       window.scrollTo({
-        top: section.offsetTop - 59,
+        top: section.offsetTop - offset,
         behavior: 'smooth', // Smooth scrolling
       });
-      setIsMobileMenuOpen(false); // Close mobile menu on link click
+  
+      // Manually set the active section to 'about' when 'About Us' is clicked
+      if (sectionId === 'about') {
+        setActiveSection('about');
+      } else {
+        // Delay closing the mobile menu to ensure the section is scrolled to first
+        setTimeout(() => {
+          setIsMobileMenuOpen(false); // Close mobile menu after a short delay
+        }, 500); // You can adjust the delay duration as needed
+      }
     }
   };
-
+  
+  
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -87,29 +96,48 @@ function Navibar() {
       <div className="logo">
         <img src={logo} alt='Your Company Logo' />
       </div>
-      <div className={`mobile-menu-icon ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
+      <div
+        className={`mobile-menu-icon ${isMobileMenuOpen ? 'open' : ''}`}
+        onClick={toggleMobileMenu}
+      >
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
-      <ul className={`link-list nav-links ${isMobileMenuOpen ? 'open' : ''}`} style={style2}>
+      <ul
+        className={`link-list nav-links ${isMobileMenuOpen ? 'open' : ''}`}
+        style={style2}
+      >
         <li
           className={isScrolled ? 'scrolled' : ''}
           onClick={() => handleNavLinkClick('home')}
         >
-          <a className={activeSection === 'home' ? 'active' : ''}>Home</a>
+          <a
+            className={activeSection === 'home' ? 'active' : ''}
+            href="#home"
+          >
+            Home
+          </a>
         </li>
         <li
           className={isScrolled ? 'scrolled' : ''}
           onClick={() => handleNavLinkClick('about')}
         >
-          <a className={activeSection === 'about' ? 'active' : ''}>About Us</a>
+          <a
+            className={activeSection === 'about' ? 'active' : ''}
+            href="#about"
+          >
+            About Us
+          </a>
         </li>
         <li
           className={isScrolled ? 'scrolled' : ''}
           onClick={() => handleNavLinkClick('achievements')}
         >
-          <a className={activeSection === 'achievements' ? 'active' : ''}>
+          <a
+            className={activeSection === 'achievements' ? 'active' : ''}
+            href="#achievements"
+          >
             Achievements
           </a>
         </li>
@@ -117,7 +145,10 @@ function Navibar() {
           className={isScrolled ? 'scrolled' : ''}
           onClick={() => handleNavLinkClick('services')}
         >
-          <a className={activeSection === 'services' ? 'active' : ''}>
+          <a
+            className={activeSection === 'services' ? 'active' : ''}
+            href="#services"
+          >
             Our Services
           </a>
         </li>
@@ -125,7 +156,10 @@ function Navibar() {
           className={isScrolled ? 'scrolled' : ''}
           onClick={() => handleNavLinkClick('ourteam')}
         >
-          <a className={activeSection === 'ourteam' ? 'active' : ''}>
+          <a
+            className={activeSection === 'ourteam' ? 'active' : ''}
+            href="#ourteam"
+          >
             Our Team
           </a>
         </li>
