@@ -1,0 +1,14 @@
+
+  /* Style the container holding the background image */
+  .parallax-container {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  

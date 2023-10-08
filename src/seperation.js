@@ -21,11 +21,11 @@ function ParallaxEffect() {
   }, []);
 
   // Calculate the background position based on the scroll position
-  const backgroundPositionY = scrollPosition * 0.2 + 'px';
+  const backgroundPositionY = scrollPosition * 0.033 + 'px';
 
   const containerStyle = {
-    backgroundImage: `url('/seperation.jpg')`,
-    backgroundSize: 'cover',
+    backgroundImage: `url('/s1.jpg')`,
+    backgroundSize: 'contain',
     backgroundPosition: `center ${backgroundPositionY}`,
     backgroundAttachment: 'fixed',
     minHeight: '70vh',
