@@ -3,7 +3,7 @@
   margin-top: 4rem;
   margin-bottom: 4rem;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -18,6 +18,12 @@
   opacity: 0;
   transition: opacity 1s ease-in-out;
   display: flex;
+  justify-content:flex-end;
+}
+
+.info{
+padding-left:3%;
+padding-right:3%;
 }
 
 .box img {
@@ -30,14 +36,26 @@
   margin: 10px 0;
 }
 
-/* Add these CSS classes in your App.css or a separate CSS file */
-.fade-in-left {
+.box-right {
+  flex-direction: row-reverse;
+}
+
+.info-right {
+  text-align: left;
+}
+
+.images {
+  width: 27%;
+  height: 27%;
+}
+
+.fade-left {
   animation: fadeInLeft 1s ease forwards;
   opacity: 0;
   transform: translateX(-50px);
 }
 
-.fade-in-right {
+.fade-right {
   animation: fadeInRight 1s ease forwards;
   opacity: 0;
   transform: translateX(50px);
@@ -57,37 +75,15 @@
   }
 }
 
-/*  .fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
+@media only screen and (max-width: 768px) {
+  .box{
+    max-width: 90%;
   }
-  
-  .fade-out {
-    animation: fadeOut 1s ease-in-out forwards;
+  .textual
+  {
+    font-size: 0.5em;
   }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateX(-20%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  .info {
+    padding: 2%;
   }
-  
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateX(-20%);
-    }
-  } */
-
-  .images{
-    width:27%;
-    height:27%;
-  }
+}
