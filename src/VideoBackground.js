@@ -38,7 +38,7 @@ export default function BackgroundVideo() {
         <video src={video} autoPlay loop muted />
         <div className="logoandtagline">
           <img className="mainlogo" src={logo} alt="logo" />
-          <h1 style={style2}>Welcome to Our Website</h1>
+          <h1 style={style2}>Implementing Innovations</h1>
         </div>
         <div className="button-container">
           <button className="button button1" onClick={scrollToContact}>
