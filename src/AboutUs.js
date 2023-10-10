@@ -19,17 +19,17 @@ const boxesData = [
   {
     image: image1,
     heading: 'WHO WE ARE?' ,
-    text: '"Lorem ipsum dollabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    text:'We are a dynamic company, exclusively composed of students from the prestigious Indian Institute of Technology Kharagpur (IIT Kharagpur). Recognized for its rigorous academic standards and an exceptionally low acceptance rate of just 0.5%, IIT Kharagpur is renowned in India. As IITians, we epitomize qualities synonymous with our educational background: an unwavering dedication, unrelenting perseverance, and an unyielding commitment to excellence. These shared attributes propel us not only in our academic pursuits but also ignite our drive to deliver exceptional results in the realms of business and technology.'
   },
   {
     image: image2,
     heading: 'WHAT WE DO?',
-    text: '"Loreabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    text: "At Datsol Solutions, we're experts in innovative and creative technical and business services, embodying our tagline, 'Implementing Innovations.' Our top-tier students from IIT Kharagpur are at the heart of this excellence. They contribute to a diverse range of projects, handling everything from initial assignment to final delivery. We ensure dedicated quality for our clients, making success accessible. We serve as the bridge between exceptional talent and impactful projects, simplifying the process for both students and companies.",
   },
   {
     image: image3,
-    heading: 'HOW CAN WE HELP YOU?',
-    text: '"Lorem ipsum dolor sit amet, conselaboregna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    heading: 'WHY TRUST US?',
+    text: "Elevate your project experience with Datsol Solutions, where excellence meets efficiency. Our elite team of IIT students ensures rapid, efficient, and cost-effective execution, delivering top-tier results while sparing you HR complexities. Trust us for a polished and professional project execution, and discover a comprehensive, one-stop solution for your project needs. Datsol Solutions: Your partner in seamless innovation and success, backed by India's top IIT talent.",
   },
 ];
 

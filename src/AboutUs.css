@@ -1,7 +1,7 @@
 .container {
   padding: 15vh;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
   display: flex;
   flex-direction:column;
   align-items: center;
@@ -60,7 +60,13 @@ padding-right:3%;
   opacity: 0;
   transform: translateX(50px);
 }
-
+.info h2
+{
+  font-size: 1em;
+}
+.info p{
+  font-size: 0.85em;
+}
 @keyframes fadeInLeft {
   to {
     opacity: 1;
