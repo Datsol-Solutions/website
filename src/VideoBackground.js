@@ -5,7 +5,7 @@ import logo from './media/logo_b.png';
 
 const style2 = {
   fontFamily: 'IBM Plex Sans, sans-serif',
-  fontSize: 16,
+  fontSize: '4vw',
 };
 
 export default function BackgroundVideo() {
