@@ -17,7 +17,7 @@
 }
 
 /* Style the logo image */
-.logo {
+.logo-contact {
   max-width: 100%;
   height: auto;
   max-height: 200px; /* Adjust the height as needed */
@@ -64,4 +64,11 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #0056b3; /* Hover state background color */
+}
+
+@media screen and (max-width: 768px) {
+  .contact-us-container{
+    display: flex;
+    flex-direction: column;
+  }
 }
