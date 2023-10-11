@@ -13,9 +13,9 @@ const style2 = {
 };
 
 const AchievementSection = () => {
-  const [numberClients, setNumberClients] = useState(0);
-  const [numberEmployees, setNumberEmployees] = useState(0);
-  const [capital, setCapital] = useState(0);
+  const [numberProjects, setnumberProjects] = useState(0);
+  const [numberTeamMembers, setnumberTeamMembers] = useState(0);
+  const [companies, setcompanies] = useState(0);
   const [sectionAppeared, setSectionAppeared] = useState(false);
   const sectionRef = useRef(null);
 
@@ -42,13 +42,13 @@ const AchievementSection = () => {
         setSectionAppeared(true);
 
         // Assuming user inputs are in state or props
-        const targetNumberClients =  1000;
-        const targetNumberEmployees =  50;
-        const targetCapital = 2000000;
+        const targetnumberProjects =  11;
+        const targetnumberTeamMembers =  22;
+        const targetcompanies = 34;
 
-        animateNumber('numberClients', targetNumberClients);
-        animateNumber('numberEmployees', targetNumberEmployees);
-        animateNumber('capital', targetCapital);
+        animateNumber('numberProjects', targetnumberProjects);
+        animateNumber('numberTeamMembers', targetnumberTeamMembers);
+        animateNumber('companies', targetcompanies);
       }
     };
 
@@ -68,14 +68,14 @@ const AchievementSection = () => {
       startValue = Math.min(startValue, targetValue);
 
       switch (type) {
-        case 'numberClients':
-          setNumberClients(Math.floor(startValue));
+        case 'numberProjects':
+          setnumberProjects(Math.floor(startValue));
           break;
-        case 'numberEmployees':
-          setNumberEmployees(Math.floor(startValue));
+        case 'numberTeamMembers':
+          setnumberTeamMembers(Math.floor(startValue));
           break;
-        case 'capital':
-          setCapital(Math.floor(startValue));
+        case 'companies':
+          setcompanies(Math.floor(startValue));
           break;
         default:
           break;
@@ -105,16 +105,16 @@ const AchievementSection = () => {
       </div>
       <div className="text-content">
         <div className="achievement-item">
-          <h5 className='number_text' style={style2}>Number of Clients</h5>
-          <p className='numbers'>{numberClients}+</p>
+          <h5 className='number_text' style={style2}>Number of projects </h5>
+          <p className='numbers'>{numberProjects}+</p>
         </div>
         <div className="achievement-item">
-        <p className='numbers'>{numberEmployees}+</p>
-          <h5 className='number_text' style={style2}>Number of Employees</h5>
+        <p className='numbers'>{numberTeamMembers}+</p>
+          <h5 className='number_text' style={style2}>Number of Team Members</h5>
         </div>
         <div className="achievement-item">
-          <h5 className='number_text' style={style2}>Capital</h5>
-          <p className='numbers'>${capital}+</p>
+          <h5 className='number_text' style={style2}>Companies served</h5>
+          <p className='numbers'>{companies}+</p>
         </div>
       </div>
     </div>

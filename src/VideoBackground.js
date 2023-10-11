@@ -5,6 +5,7 @@ import logo from './media/logo_b.png';
 
 const style2 = {
   fontFamily: 'IBM Plex Sans, sans-serif',
+  fontSize: '4vw',
 };
 
 export default function BackgroundVideo() {
@@ -38,7 +39,7 @@ export default function BackgroundVideo() {
         <video src={video} autoPlay loop muted />
         <div className="logoandtagline">
           <img className="mainlogo" src={logo} alt="logo" />
-          <h1 style={style2}>Welcome to Our Website</h1>
+          <h1 style={style2}>Implementing Innovations</h1>
         </div>
         <div className="button-container">
           <button className="button button1" onClick={scrollToContact}>

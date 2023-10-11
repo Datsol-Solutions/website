@@ -94,7 +94,7 @@ function ContactUs() {
   return (
     <div id="contact" className="contact-us-container">
       <div className="logo-container">
-        <img src={Logo} alt="Logo" className="logo" />
+        <img src={Logo} alt="Logo" className="logo-contact" />
       </div>
       <div className="form-container">
         <h1 style={style1}>Contact Us</h1>
