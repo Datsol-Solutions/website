@@ -1,26 +1,32 @@
-/* OurTeam.css (or your component-specific CSS file) */
-
 .our-team {
-    position:relative;
-    text-align: center;
-    padding: 0 20px 70px 20px;
-    z-index: 2;
-    overflow-x: hidden;
-    background-color: #FDFDFA;
-  }
-  
-  .our-team h1 {
-    
-    margin: 5vw 0;
-  }
-  
-  .team-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  
-  
+  position:relative;
+  text-align: center;
+  padding: 0 20px 70px 20px;
+  z-index: 2;
+  overflow-x: hidden;
+  background-color: #FDFDFA;
+}
+
+.our-team h1 {
+  margin: 5vw 0;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  gap: 30px;
+}
+.team-head-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 5%;
+}
+h1{
+  margin: 0%;
+  padding: 0%;
+}
