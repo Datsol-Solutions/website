@@ -9,7 +9,7 @@ import ParallaxEffect from './seperation';
 import AboutUs from './AboutUs';
 import Achievement from './Achievement';
 import Carousel from './Carousel';
-import ContactUs from './ContactUs';
+import ContactForm from './contact';
 import ScrollButton from './ScrollButton';
 import Footer from './Footer';
 import ParallaxEffect2 from './separation2';
@@ -107,7 +107,7 @@ export default function App() {
       </section>
       <section id="contact">
         <div>
-          <ContactUs />
+          <ContactForm />
         </div>
       </section>
       <Footer />
