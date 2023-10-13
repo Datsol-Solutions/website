@@ -16,7 +16,7 @@ function Teamcard(props) {
       <div className="card-info">
         <div className="card-avatar"></div>
         <div className="card-title">{props.name}</div>
-        <div className="card-subtitle">CEO &amp; Co-Founder</div>
+        <div className="card-subtitle">{props.subtitle}</div>
       </div>
       <ul className="card-social">
         <li className="card-social__item">
@@ -40,7 +40,7 @@ function Teamcard(props) {
 
 Teamcard.propTypes = {
   name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   inlink: PropTypes.string.isRequired, // Add this line for the 'inlink' prop
   gmaillink: PropTypes.string.isRequired

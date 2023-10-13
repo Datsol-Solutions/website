@@ -1,6 +1,9 @@
+// OurTeam.js
+
 import React from 'react';
-import Teamcard from './Team_card'; // Import the Card component
-import './OurTeam.css'; // Import your CSS file
+import Teamcard from './Team_card';
+import './OurTeam.css';
+
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
 };
@@ -8,91 +11,105 @@ const style1 = {
 const style2 = {
   fontFamily: 'IBM Plex Sans, sans-serif',
 };
+
 function OurTeam() {
-  const teamData = [
+  const teamHeadData = [
     {
       id: 1,
       name: 'Kajal Singh',
-      description: 'Description for Team Member 1',
-      image: 'image1.jpg', // Replace with the path to the image
-      gmaillink:'Kajalsinghmbd2001@gmail.com',
-      inlink:'https://www.linkedin.com/in/kajal-singh-164242213'
+      subtitle:'Team Lead',
+      image: 'image1.jpg',
+      gmaillink: 'Kajalsinghmbd2001@gmail.com',
+      inlink: 'https://www.linkedin.com/in/kajal-singh-164242213',
     },
     {
       id: 2,
       name: 'Subham Kumar',
-      description: 'Description for Team Member 2',
-      image: 'image2.jpg', // Replace with the path to the image
-      gmaillink:'2002subhamkumar@gmail.com',
-      inlink:'https://www.linkedin.com/in/subham-kumar-054221215/'
+      subtitle:'Team Lead',
+      image: 'image2.jpg',
+      gmaillink: '2002subhamkumar@gmail.com',
+      inlink: 'https://www.linkedin.com/in/subham-kumar-054221215/',
     },
     {
       id: 3,
       name: 'Shivam Ratne',
-      description: 'Description for Team Member 3',
-      image: 'image3.jpg', // Replace with the path to the image
-      gmaillink:'shivamratne999@gmail.com',
-      inlink:'http://www.linkedin.com/in/shivamratne'
+      subtitle:'Associate Team Lead',
+      image: 'image3.jpg',
+      gmaillink: 'shivamratne999@gmail.com',
+      inlink: 'http://www.linkedin.com/in/shivamratne',
+    }
+  ];
+  const teamData = [
+    {
+      id: 1,
+      name: 'Tanisha Panda',
+      subtitle:'Associate Member',
+      image: 'image4.jpg',
+      gmaillink: 'kaitanisha2601@gmail.com',
+      inlink: 'https://www.linkedin.com/in/tanisha-panda-0a8131205',
+    },
+    {
+      id: 2,
+      name: 'Gaurav Chanchal',
+      subtitle:'Associate Member',
+      image: 'image5.jpg',
+      gmaillink: 'gauravchanchal2003@gmail.com',
+      inlink: 'https://www.linkedin.com/in/gaurav-chanchal',
+    },
+    {
+      id: 3,
+      name: 'Tanu Sharma',
+      subtitle:'Associate Member',
+      image: 'image6.jpg',
+      gmaillink: 'tanusharma0801@gmail.com',
+      inlink: 'https://www.linkedin.com/in/tanu-sharma-1395b1224/',
     },
     {
       id: 4,
-      name: 'Tanisha Panda',
-      description: 'Description for Team Member 4',
-      image: 'image4.jpg', // Replace with the path to the image
-      gmaillink:'kaitanisha2601@gmail.com',
-      inlink:'https://www.linkedin.com/in/tanisha-panda-0a8131205'
+      name: 'Himanshu Singh',
+      subtitle:'Associate Member',
+      image: 'image7.jpg',
+      gmaillink: 'himaanshsinghh@gmail.com',
+      inlink: 'https://www.linkedin.com/in/himanshu-singh-360b9321a',
     },
     {
       id: 5,
-      name: 'Gaurav Chanchal',
-      description: 'Description for Team Member 5',
-      image: 'image5.jpg', // Replace with the path to the image
-      gmaillink:'gauravchanchal2003@gmail.com',
-      inlink:'https://www.linkedin.com/in/gaurav-chanchal'
-    },
-    {
-      id: 6,
-      name: 'Tanu Sharma',
-      description: 'Description for Team Member 5',
-      image: 'image5.jpg', // Replace with the path to the image
-      gmaillink:'tanusharma0801@gmail.com',
-      inlink:'https://www.linkedin.com/in/tanu-sharma-1395b1224/'
-    },
-    {
-      id: 7,
-      name: 'Himanshu Singh',
-      description: 'Description for Team Member 5',
-      image: 'image5.jpg', // Replace with the path to the image
-      gmaillink:'himaanshsinghh@gmail.com',
-      inlink:'https://www.linkedin.com/in/himanshu-singh-360b9321a'
-    },
-    {
-      id: 8,
       name: 'Swapnil Shekhar',
-      description: 'Description for Team Member 5',
-      image: 'image5.jpg', // Replace with the path to the image
-      gmaillink:'swapnil7924@gmail.com',
-      inlink:'https://www.linkedin.com/in/swapnil-shekhar7'
+      subtitle:'Associate Member',
+      image: 'image8.jpg',
+      gmaillink: 'swapnil7924@gmail.com',
+      inlink: 'https://www.linkedin.com/in/swapnil-shekhar7',
     },
   ];
-
   return (
     <section>
-    <div className="our-team">
-      <h1 style={style1}>Our Team</h1>
-      <div style={style2} className="team-cards">
-        {teamData.map((teamMember) => (
+      <div className="our-team">
+        <h1 style={style1}>Client and Strategy Team</h1>
+        <div style={style2} className="team-head-cards">
+        {teamHeadData.map((teamMember) => (
           <Teamcard
             key={teamMember.id}
             name={teamMember.name}
-            description={teamMember.description}
+            subtitle={teamMember.subtitle}
             image={teamMember.image}
             gmaillink={teamMember.gmaillink}
             inlink={teamMember.inlink}
           />
         ))}
       </div>
-    </div>
+      <div style={style2} className="team-cards">
+        {teamData.map((teamMember) => (
+          <Teamcard
+            key={teamMember.id}
+            name={teamMember.name}
+            subtitle={teamMember.subtitle}
+            image={teamMember.image}
+            gmaillink={teamMember.gmaillink}
+            inlink={teamMember.inlink}
+          />
+        ))}
+      </div>
+      </div>
     </section>
   );
 }
