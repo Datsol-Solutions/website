@@ -3,6 +3,14 @@
 import React from 'react';
 import Teamcard from './Team_card';
 import './OurTeam.css';
+import Himanshu from './media/Himanshu.png';
+import Tanu from './media/Tanu.png';
+import Kajal from './media/Kajal.png';
+import Shivam from './media/Shivam.png';
+import Swapnil from './media/Swapnil.png';
+import Tanisha from './media/Tanisha.png';
+import Subham from './media/Shubham.png';
+import Gaurav from './media/Gaurav.png';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
@@ -18,7 +26,7 @@ function OurTeam() {
       id: 1,
       name: 'Kajal Singh',
       subtitle:'Team Lead',
-      image: 'image1.jpg',
+      image: Kajal,
       gmaillink: 'Kajalsinghmbd2001@gmail.com',
       inlink: 'https://www.linkedin.com/in/kajal-singh-164242213',
     },
@@ -26,7 +34,7 @@ function OurTeam() {
       id: 2,
       name: 'Subham Kumar',
       subtitle:'Team Lead',
-      image: 'image2.jpg',
+      image: Subham,
       gmaillink: '2002subhamkumar@gmail.com',
       inlink: 'https://www.linkedin.com/in/subham-kumar-054221215/',
     },
@@ -34,7 +42,7 @@ function OurTeam() {
       id: 3,
       name: 'Shivam Ratne',
       subtitle:'Associate Team Lead',
-      image: 'image3.jpg',
+      image: Shivam,
       gmaillink: 'shivamratne999@gmail.com',
       inlink: 'http://www.linkedin.com/in/shivamratne',
     }
@@ -44,7 +52,7 @@ function OurTeam() {
       id: 1,
       name: 'Tanisha Panda',
       subtitle:'Associate Member',
-      image: 'image4.jpg',
+      image: Tanisha,
       gmaillink: 'kaitanisha2601@gmail.com',
       inlink: 'https://www.linkedin.com/in/tanisha-panda-0a8131205',
     },
@@ -52,7 +60,7 @@ function OurTeam() {
       id: 2,
       name: 'Gaurav Chanchal',
       subtitle:'Associate Member',
-      image: 'image5.jpg',
+      image: Gaurav,
       gmaillink: 'gauravchanchal2003@gmail.com',
       inlink: 'https://www.linkedin.com/in/gaurav-chanchal',
     },
@@ -60,7 +68,7 @@ function OurTeam() {
       id: 3,
       name: 'Tanu Sharma',
       subtitle:'Associate Member',
-      image: 'image6.jpg',
+      image: Tanu,
       gmaillink: 'tanusharma0801@gmail.com',
       inlink: 'https://www.linkedin.com/in/tanu-sharma-1395b1224/',
     },
@@ -68,7 +76,7 @@ function OurTeam() {
       id: 4,
       name: 'Himanshu Singh',
       subtitle:'Associate Member',
-      image: 'image7.jpg',
+      image: Himanshu,
       gmaillink: 'himaanshsinghh@gmail.com',
       inlink: 'https://www.linkedin.com/in/himanshu-singh-360b9321a',
     },
@@ -76,7 +84,7 @@ function OurTeam() {
       id: 5,
       name: 'Swapnil Shekhar',
       subtitle:'Associate Member',
-      image: 'image8.jpg',
+      image: Swapnil,
       gmaillink: 'swapnil7924@gmail.com',
       inlink: 'https://www.linkedin.com/in/swapnil-shekhar7',
     },

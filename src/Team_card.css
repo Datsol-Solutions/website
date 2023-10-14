@@ -19,10 +19,8 @@
 
 /*Image*/
 .card-avatar {
-    --size: 75px;
-    background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
-    width: var(--size);
-    height: var(--size);
+    height: 100px;
+    width:100px;
     border-radius: 50%;
     transition: transform .2s ease;
     margin: 1.5rem;
@@ -103,8 +101,8 @@
     }
 
     .card-avatar {
-        --size: 30px;
-        border-radius: 50%;
+        height: 60px;
+        width: 60px;
         margin-bottom: 0.8rem;
     }
 

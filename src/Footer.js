@@ -15,30 +15,21 @@ const Footer = () => {
     <footer className="footer" style={style2}>
       <div className="footer-columns">
         <div className="footer-column">
-          <p><b>Get to know us</b></p>
-          <p>Text 1</p>
-          <p>Text 2</p>
-          <p>Text 3</p>
+          <p className="items">Back to top</p>
+          <p className="items">About Us</p>
+          <p className="items">Services</p>
+          <p className="items">Our Team</p>
         </div>
 
         <div className="footer-column">
-          <p><b>Contact us</b></p>
-          <p>Facebook</p>
-          <p>Instagram</p>
-          <p>LinkedIn</p>
-        </div>
-
-        <div className="footer-column">
-          <p><b>Support and Education</b></p>
-          <p>Terms and Conditions</p>
-          <p>Text 2</p>
-          <p>Text 3</p>
+          <p className="items">DatsolSolutions@gmail.com</p>
+          <p className="items">Ph No.- 99999999999</p>
         </div>
       </div>
 
       <hr className="footer-divider" />
 
-      <p className="footer-company">© Datsol Solutions</p>
+      <p className="footer-company">Copyright © 2023DatsolSolutions.com</p>
     </footer>
   );
 };
