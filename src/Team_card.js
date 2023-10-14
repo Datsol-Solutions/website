@@ -22,7 +22,7 @@ function Teamcard(props) {
   return (
     <div className="card">
       <div className="card-info">
-        <div className="card-avatar"></div>
+        <div ><img className="card-avatar" src={props.image}></img></div>
         <div className="card-title">{props.name}</div>
         <div className="card-subtitle">{props.subtitle}</div>
       </div>
