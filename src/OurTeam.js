@@ -8,10 +8,10 @@ import Tanu from './media/Tanu.png';
 import Kajal from './media/Kajal.png';
 import Shivam from './media/Shivam.png';
 import Swapnil from './media/Swapnil.png';
-// import Tanisha from './media/Tanisha.jpeg';
-// import Subham from './media/Subham.jpeg';
-// import Gaurav from './media/Gaurav.jpeg';
-import photo from './media/photo.png';
+import Tanisha from './media/Tanisha.png';
+import Subham from './media/Shubham.png';
+import Gaurav from './media/Gaurav.png';
+
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
 };
@@ -34,7 +34,7 @@ function OurTeam() {
       id: 2,
       name: 'Subham Kumar',
       subtitle:'Team Lead',
-      image: photo,
+      image: Subham,
       gmaillink: '2002subhamkumar@gmail.com',
       inlink: 'https://www.linkedin.com/in/subham-kumar-054221215/',
     },
@@ -52,7 +52,7 @@ function OurTeam() {
       id: 1,
       name: 'Tanisha Panda',
       subtitle:'Associate Member',
-      image: photo,
+      image: Tanisha,
       gmaillink: 'kaitanisha2601@gmail.com',
       inlink: 'https://www.linkedin.com/in/tanisha-panda-0a8131205',
     },
@@ -60,7 +60,7 @@ function OurTeam() {
       id: 2,
       name: 'Gaurav Chanchal',
       subtitle:'Associate Member',
-      image: photo,
+      image: Gaurav,
       gmaillink: 'gauravchanchal2003@gmail.com',
       inlink: 'https://www.linkedin.com/in/gaurav-chanchal',
     },
