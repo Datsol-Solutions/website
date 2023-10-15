@@ -57,7 +57,7 @@ function Box({ image, heading, text, delay, animation, layout }) {
       <img className="images" src={image} alt={heading} data-aos="fade-up" />
       <div className={`info ${layout === 'right' ? 'info-right' : ''}`}>
         <h2 className="textual" data-aos="fade-up" style={style2}>
-          {heading }
+          <b>{heading }</b>
         </h2>
         <p className="textual" data-aos="fade-up" style={style2}>
           {text}
