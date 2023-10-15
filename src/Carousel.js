@@ -8,14 +8,40 @@ const style1 = {
   margin: '5vw',
 };
 
+// Define a new set of card data
+const newCards = [
+  {
+    title: 'Software Development',
+    description: 'We craft software solutions that turn your ideas into efficient, user-friendly, and scalable digital realities',
+
+  },
+  {
+    title: 'AI & ML Applications',
+    description: 'We are experts in harnessing AI and ML to realize your vision and enhancing model performance, all while tailored to your unique requirements.',
+
+  },
+  {
+    title: 'Strategy & Consulting',
+    description: 'We are your partners in navigating the complex landscape of business, offering expert data-driven strategies to propel your company towards success.',
+
+  },
+  {
+    title: 'Finance & Analytics',
+    description: 'We meld deep financial acumen and technical proficiency to craft tailored financial analysis and evaluation models that precisely meet your needs.',
+
+  },
+];
+
 function Carousel({ cards }) {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [lastIndex, setLastIndex] = useState(cards.length - 1);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Ensure at least 3 cards are in the array
-  if (cards.length < 3) {
-    cards = [...cards, ...cards, ...cards]; // Duplicate cards to ensure at least 3
-  }
+  // Calculate translateValue to achieve the desired layout
+  const cardWidth = 26.66; // Width of each card in percentage
+  const screenWidth = 80; // Total screen width in percentage
+  const translateValue = -(activeIndex * cardWidth) + 10; // Adjusted translateValue
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,10 +53,11 @@ function Carousel({ cards }) {
     return () => clearInterval(interval);
   }, [cards, isHovered]);
 
-  // Calculate translateValue to achieve the desired layout
-  const cardWidth = 26.66; // Width of each card in percentage
-  const screenWidth = 80; // Total screen width in percentage
-  const translateValue = -(activeIndex * cardWidth) + 10; // Adjusted translateValue
+  useEffect(() => {
+    if (activeIndex === lastIndex) {
+      setActiveIndex(0);
+    }
+  }, [activeIndex, lastIndex]);
 
   return (
     <div
@@ -45,11 +72,19 @@ function Carousel({ cards }) {
             key={index}
             title={card.title}
             description={card.description}
-            imageSrc={card.imageSrc}
             className={`card2 ${index === activeIndex ? 'active' : ''}`}
           />
         ))}
       </div>
+    </div>
+  );
+}
+
+// Pass the newCards array as a prop to the Carousel component
+function App() {
+  return (
+    <div>
+      <Carousel cards={newCards} />
     </div>
   );
 }
@@ -63,4 +98,4 @@ Carousel.propTypes = {
   })).isRequired,
 };
 
-export default Carousel;
+export default App;
