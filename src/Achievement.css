@@ -7,15 +7,19 @@
 .map-gif {
   flex: 1;
   width: 100%;
-  height: auto;
+  background: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #6d9ec6);
+  height:auto;
   overflow: hidden;
   height: auto;
   object-fit: cover;
   /* padding-left: 7%; */
+  margin-bottom: 0%;
   display: flex;
   justify-content: center;
 }
-
+Worldmap{
+  border-radius: 20%;
+}
 /* .map-gif img {
     width: 100%;
     height: auto;
@@ -65,7 +69,7 @@ h3 {
   font-size:2em;
 }
 
-@media (max-width: 1100px) and (min-width: 768px) {
+@media (max-width: 1100px) {
   .achievement-item {
     padding-left: 0;
     /* Remove left padding for items */
@@ -83,6 +87,18 @@ h3 {
   .numbers{
     font-size: 1.7em;
   }
+  .map-gif {
+
+    width: 90%;
+    background: radial-gradient(circle, #ffffff, #ffffff, #ffffff,#ffffff, #adc5d8);
+  }
+}
+@media (max-width: 950px) {
+  
+  .map-gif {
+    justify-content: center;
+    background: radial-gradient(circle, #ffffff, #ffffff, #ffffff,#ffffff, #ffffff,#e8f3fa);
+  }
 }
 @media (max-width: 768px) {
   .achievement-section {
@@ -96,6 +112,8 @@ h3 {
     padding: 0;
     /* Remove left padding */
     display: flex;
+    width: 80%;
+    background:radial-gradient(circle, #ffffff, #ffffff, #ffffff,#ffffff, #f9f9f9);
     justify-content: center;
   }
 
