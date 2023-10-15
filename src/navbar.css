@@ -30,7 +30,8 @@
 .logo img {
   margin-right: 10px; /* Add margin to the right of the logo */
   width: auto;
-  height: 3.8vw;
+  height: 3.5vw;
+  padding-left: 2rem;
 }
 
 /* Add a space after 'main' to target elements with the 'content' class inside 'main' */
@@ -71,7 +72,7 @@ main .content {
     margin-bottom: 10px;
     /* Keep the logo on the left side */
     justify-content: flex-start;
-    margin-left: 20px; /* Add margin to the left of the logo */
+
     width: auto; /* Adjust the width as needed */
   }
 

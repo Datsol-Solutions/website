@@ -15,14 +15,20 @@
 }
 
 .footer-column {
+  display: flex;
+  flex-direction: column;
   flex: 0 0 calc(33.33% - 20px);
   margin: 10px;
   text-align: left; /* Set text alignment to left */
+  color: #081F37;
+  
 }
 
 .items {
   align-items: flex-start;
   text-align: left; /* Set text alignment to left */
+  text-decoration: none;
+  color: #081F37;
 }
 
 .footer-column h3 {
@@ -38,5 +44,5 @@
 
 .footer-company {
   font-size: 14px;
-  color: #555;
+  color: #081F37;
 }
