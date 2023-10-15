@@ -92,7 +92,39 @@
 .card-avatar:hover {
     transform: scale(1.1);
 }
+@media only screen and (max-width: 1000px) {
 
+    .card {
+        width: 160px;
+        height:20%;
+    }
+
+    .card-avatar {
+        height: 80px;
+        width: 80px;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-social__item svg {
+        height: 13px;
+        width: 13px;
+
+    }
+
+    /*Text*/
+    .card-title {
+        font-size: 0.8em;
+        color: #081F37;
+        font-weight: 600;
+        line-height: 1.1rem;
+    }
+
+    .card-subtitle {
+        color: #68869A;
+        font-size: 0.7em;
+    }
+
+}
 @media only screen and (max-width: 700px) {
 
     .card {

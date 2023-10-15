@@ -9,6 +9,7 @@
 
 .our-team h1 {
   margin: 5vw 0;
+  font-size: 2em;
 }
 
 .team-cards {
@@ -29,4 +30,20 @@
 h1{
   margin: 0%;
   padding: 0%;
+}
+
+@media (max-width: 1000px) {
+  .our-team h1 {
+    margin: 5vw 0;
+    font-size: 1.7em;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .our-team h1 {
+    margin: 5vw 0;
+    font-size: 1.4em;
+  }
+  
 }

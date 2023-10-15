@@ -60,6 +60,11 @@ h3 {
   display: inline;
   padding: 0px 10px 0px 0px;
 }
+
+.header_achievement h1{
+  font-size:2em;
+}
+
 @media (max-width: 1100px) and (min-width: 768px) {
   .achievement-item {
     padding-left: 0;
@@ -69,14 +74,24 @@ h3 {
     flex-direction: column;
     /* Center-align items */
   }
-
+  .number_text{
+   font-size: 1em;
+  }
+  .header_achievement h1{
+    font-size:1.7em;
+  }
+  .numbers{
+    font-size: 1.7em;
+  }
 }
 @media (max-width: 768px) {
   .achievement-section {
     flex-direction: column;
     /* Stack elements vertically */
   }
-
+  .numbers{
+    font-size: 1.5em;
+  }
   .map-gif {
     padding: 0;
     /* Remove left padding */
@@ -86,17 +101,20 @@ h3 {
 
   .text-content {
     width: 100%;
-    /* Full width for text content on smaller screens */
     padding: 20px;
     /* Add some padding for spacing */
   }
-
+  .number_text {
+   font-size: 1em;
+  }
   .achievement-item {
     padding-left: 0;
     /* Remove left padding for items */
     text-align: center;
     /* Center-align items */
   }
-
+  .header_achievement h1{
+    font-size:1.4em;
+  }
   
 }
