@@ -5,6 +5,7 @@ import WorldMap from "react-svg-worldmap";
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
+  fontSize: '4vw',
   margin: '5vw',
 };
 

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
   margin: '5vw',
+  fontSize: '4vw',
 };
 
 // Define a new set of card data

@@ -73,7 +73,10 @@
   font-size: 1em;
 }
 .info p{
-  font-size: 0.85em;
+  font-size: 1em;
+}
+.yellow {
+  color: FFD369;
 }
 @keyframes fadeInLeft {
   to {

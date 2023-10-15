@@ -29,13 +29,15 @@
   padding: 40px;
   font-size: 1rem;
   text-align: left;
-  border: 1px solid #242b45;
+  color: #081f37;
+  background-color: #BBE1FA;
+  /* border: 1px solid #242b45; */
   transition: transform 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
 }
 
 .card2:hover {
   transform: scale(1.1);
-  border: 2px solid rgb(228, 205, 69);
+  border: 2px solid #081F37;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
