@@ -56,7 +56,7 @@ function Box({ image, heading, text, delay, animation, layout }) {
     >
       <img className="images" src={image} alt={heading} data-aos="fade-up" />
       <div className={`info ${layout === 'right' ? 'info-right' : ''}`}>
-        <h2 className="textual" data-aos="fade-up" style={style3}>
+        <h2 className="textual" data-aos="fade-up" style={style2}>
           {heading }
         </h2>
         <p className="textual" data-aos="fade-up" style={style2}>
@@ -73,6 +73,7 @@ function AboutUs() {
       <h1 style={style1}>About Us</h1>
       {boxesData.map((box, index) => (
         <Box
+          style={style2}
           key={index}
           image={box.image}
           heading={box.heading}
