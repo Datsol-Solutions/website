@@ -74,8 +74,8 @@ h3 {
     padding-left: 0;
     /* Remove left padding for items */
   
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* Center-align items */
   }
   .number_text{
