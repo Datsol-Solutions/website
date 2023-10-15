@@ -14,6 +14,7 @@ import Gaurav from './media/Gaurav.png';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
+  fontSize:'4vw',
 };
 
 const style2 = {

@@ -37,7 +37,7 @@
 
 .card2:hover {
   transform: scale(1.1);
-  border: 2px solid #081F37;
+  /* border: 2px solid #081F37; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
