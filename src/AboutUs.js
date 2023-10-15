@@ -9,7 +9,6 @@ import image2 from './media/What_we_do.jpg';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
-  fontSize: '4vw',
   padding: '5vw',
 };
 
@@ -71,7 +70,7 @@ function Box({ image, heading, text, delay, animation, layout }) {
 function AboutUs() {
   return (
     <div className="container">
-      <h1 style={style1} fontSize='4vw'>About Us</h1>
+      <h1 style={style1}>About Us</h1>
       {boxesData.map((box, index) => (
         <Box
           key={index}

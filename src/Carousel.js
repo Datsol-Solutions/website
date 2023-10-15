@@ -8,9 +8,6 @@ const style1 = {
   margin: '5vw',
 };
 
-const style2 = {
-  fontFamily: 'IBM Plex Sans, sans-serif',
-};
 // Define a new set of card data
 const newCards = [
   {

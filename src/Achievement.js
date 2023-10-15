@@ -5,7 +5,6 @@ import WorldMap from "react-svg-worldmap";
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
-  fontSize: '4vw',
   margin: '5vw',
 };
 
@@ -99,7 +98,7 @@ const AchievementSection = () => {
         data={data}
       />
       </div>
-      <div className="text-content">
+      <div style={style2} className="text-content">
         <div className="achievement-item">
           <h5 className='number_text' style={style2}>Number of projects </h5>
           <p className='numbers'>{numberProjects}+</p>

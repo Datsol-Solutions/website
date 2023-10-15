@@ -12,7 +12,7 @@
 }
 
 .container h1{
-  font-size:2em;
+  font-size:2.5rem;
   padding: 0%;
   margin: 0%;
 }
@@ -93,12 +93,12 @@
 }
 @media only screen and (max-width: 1000px) {
   .container h1{
-    font-size:1.7em;
+    font-size:1.7rem;
   }
 }
 @media only screen and (max-width: 768px) {
   .container h1{
-    font-size:1.4em;
+    font-size:1.4rem;
   }
   .box{
     max-width: 90%;
