@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css'; 
-
+const style2 = {
+  fontFamily: 'IBM Plex Sans, sans-serif',
+};
 function ServiceCard({ title, description}) {
   return (
-    <div className="card2">
-      <h3>{title}</h3>
+    <div className="card2" style={style2}>
+      <h3><b>{title}</b></h3>
       <p>{description}</p>
     </div>
   );

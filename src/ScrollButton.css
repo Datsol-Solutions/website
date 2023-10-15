@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #007bff;
+    background: linear-gradient(to right, #081F37, #68869A);
     color: #fff;
     border: none;
     padding: 8px 15px;
@@ -30,12 +30,17 @@
   .button-text {
     opacity: 0;
     transition: opacity 0.3s;
+    font-size:0.8em;
   }
   
   .button-text.hovered {
     opacity: 1;
   }
-  
+  .message{
+    height:25px;
+    width:25px;
+    filter: invert(100%) hue-rotate(180deg);
+  }
   /* Adjust the position for the rest of the page */
   body:not(.front-page) .scroll-button {
     right: 20px;

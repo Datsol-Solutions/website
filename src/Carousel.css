@@ -9,7 +9,7 @@
   padding-bottom: 6%;
 }
 .carousel-container h1{
-  font-size: 2em;
+  font-size: 2.5rem;
 }
 .carousel {
   display: flex;
@@ -63,12 +63,24 @@
 
 @media only screen and (max-width: 768px) {
   .card2 {
-    flex: 0 0 35%;
+    flex: 0 0 40%;
     padding: 20px;
-    font-size: 0.6rem;
+    font-size: 0.85rem;
     text-align: justify;
   }
   .carousel-container h1{
     font-size: 1.4rem;
+   }
+}
+
+@media only screen and (max-width: 556px) {
+  .card2 {
+    flex: 0 0 45%;
+    padding: 10px;
+    font-size: 0.6rem;
+    text-align: justify;
+  }
+  .carousel-container h1{
+    font-size: 1.2rem;
    }
 }
