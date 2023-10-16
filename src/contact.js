@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './contact.css'; // Import your CSS file for styling
 import Logo from './media/logo_b.png'; // Import your logo image
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,24 +19,32 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Replace 'YOUR_GOOGLE_SHEETS_CSV_LINK' with your Google Sheets link
-    const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTx6Uf-NT1XxnuFHHyGQVV4RKJWjJzFA4V8KegL7gg9m-qqYkzqq_ovggNUVjBJm-K71ps72MDB5HSg/pub?gid=459561842&single=true&output=csv', {
-      method: 'POST',
-      body: new FormData(e.target),
-    });
+    const url = 'https://script.google.com/macros/s/AKfycbwcg2xtNTP1uKe6WndmX7M56z75LnpsG-eAasXKoL9vNhoWZIFw4h_dhaV1j8lE7Dk6/exec'; // Replace with your Google Apps Script web app URL
+    const data = new URLSearchParams(formData);
 
-    if (response.ok) {
-      // Show a success message
-      alert('Form submitted successfully!');
-    } else {
-      // Show an error message
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+
+      if (response.ok) {
+        alert('Form submitted successfully!');
+      } else {
+        alert('Error submitting the form.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
       alert('Error submitting the form.');
     }
   };
 
   return (
     <div className="contact-container">
-      <div className="logo">
+      <div className="logocontact">
         <img src={Logo} alt="Logo" className="logo-contact" />
       </div>
       <div className="form-container">

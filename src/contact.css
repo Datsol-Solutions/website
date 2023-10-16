@@ -7,13 +7,13 @@
     height: 100vh;
   }
   
-  .logo-contact {
+  .logocontact {
     width: 40%;
     padding: 20px;
     text-align: center;
   }
   
-  .logo-contact img {
+  .logocontact img {
     max-width: 100%;
     height: auto;
   }
