@@ -7,15 +7,19 @@
 .map-gif {
   flex: 1;
   width: 100%;
-  height: auto;
+  background: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #6d9ec6);
+  height:auto;
   overflow: hidden;
   height: auto;
   object-fit: cover;
   /* padding-left: 7%; */
+  margin-bottom: 0%;
   display: flex;
   justify-content: center;
 }
-
+Worldmap{
+  border-radius: 20%;
+}
 /* .map-gif img {
     width: 100%;
     height: auto;
@@ -60,43 +64,75 @@ h3 {
   display: inline;
   padding: 0px 10px 0px 0px;
 }
-@media (max-width: 1100px) and (min-width: 768px) {
+
+.header_achievement h1{
+  font-size:2.5rem;
+}
+
+@media (max-width: 1100px) {
   .achievement-item {
     padding-left: 0;
     /* Remove left padding for items */
   
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* Center-align items */
   }
+  .number_text{
+   font-size: 1em;
+  }
+  .header_achievement h1{
+    font-size:1.7rem;
+  }
+  .numbers{
+    font-size: 1.7rem;
+  }
+  .map-gif {
 
+    width: 90%;
+    background: radial-gradient(circle, #ffffff, #ffffff, #ffffff,#ffffff, #adc5d8);
+  }
+}
+@media (max-width: 950px) {
+  
+  .map-gif {
+    justify-content: center;
+    background: radial-gradient(circle, #ffffff, #ffffff, #ffffff,#ffffff, #ffffff,#e8f3fa);
+  }
 }
 @media (max-width: 768px) {
   .achievement-section {
     flex-direction: column;
     /* Stack elements vertically */
   }
-
+  .numbers{
+    font-size: 1.4rem;
+  }
   .map-gif {
     padding: 0;
     /* Remove left padding */
     display: flex;
+    width: 80%;
+    background:radial-gradient(circle, #ffffff, #ffffff, #ffffff,#ffffff, #f9f9f9);
     justify-content: center;
   }
 
   .text-content {
     width: 100%;
-    /* Full width for text content on smaller screens */
     padding: 20px;
     /* Add some padding for spacing */
   }
-
+  .number_text {
+   font-size: 1rem;
+  }
   .achievement-item {
     padding-left: 0;
     /* Remove left padding for items */
     text-align: center;
     /* Center-align items */
   }
-
+  .header_achievement h1{
+    font-size:1.4rem;
+  }
   
 }

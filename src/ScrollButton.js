@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ScrollButton.css';
+import message from './media/message.png';
 
 const ScrollButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -39,7 +40,7 @@ const ScrollButton = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="button-content">
-        {showButton && !isHovered && <span>&#9660;</span>}
+        {showButton && !isHovered && <span><img className="message" src={message}></img></span>}
         <span className={`button-text ${isHovered ? 'hovered' : ''}`}>
           {isHovered ? 'Contact Us' : ''}
         </span>

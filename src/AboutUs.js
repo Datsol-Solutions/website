@@ -15,14 +15,17 @@ const style1 = {
 const style2 = {
   fontFamily: 'IBM Plex Sans, sans-serif',
 };
-
+const style3 = {
+  fontFamily: 'Rokkitt, sans-serif',
+  fontSize: '2vw',
+};
 const boxesData = [
   {
     image: image1,
     heading: 'WHO WE ARE?',
-    text:
-      'We are a dynamic company, exclusively composed of students from the prestigious Indian Institute of Technology Kharagpur (IIT Kharagpur). Recognized for its rigorous academic standards and an exceptionally low acceptance rate of just 0.5%, IIT Kharagpur is renowned in India. As IITians, we epitomize qualities synonymous with our educational background: an unwavering dedication, unrelenting perseverance, and an unyielding commitment to excellence. These shared attributes propel us not only in our academic pursuits but also ignite our drive to deliver exceptional results in the realms of business and technology.',
-  },
+    text: <p fontSize= '10px'>At Datsol Solutions, <span style={{ color: '#68869A' }}>we are a dynamic team that embodies qualities synonymous with excellence</span>. We&apos;re a diverse group, comprising the <span style={{ color: '#FFD369' }}>top 0.5%</span> of India&apos;s young talent, hailing from the prestigious <span style={{ color: '#FFD369' }}>Indian Institute of Technology Kharagpur</span> <span style={{ color: '#66869a' }}>(IIT Kharagpur)</span>. Our journey mirrors the path of ambitious young minds, highlighting the potential one can unleash with determination and commitment. We excel not only in traditional education but also in the cutting-edge realms of business and technology. Our story is a fusion of passion and potential, continually sparking curiosity and fueling progress.</p>,
+
+   },
   {
     image: image2,
     heading: 'WHAT WE DO?',
@@ -53,10 +56,10 @@ function Box({ image, heading, text, delay, animation, layout }) {
     >
       <img className="images" src={image} alt={heading} data-aos="fade-up" />
       <div className={`info ${layout === 'right' ? 'info-right' : ''}`}>
-        <h2 className="textual" data-aos="fade-up">
-          {heading}
+        <h2 className="textual" data-aos="fade-up" style={style2}>
+          <b>{heading }</b>
         </h2>
-        <p className="textual" data-aos="fade-up">
+        <p className="textual" data-aos="fade-up" style={style2}>
           {text}
         </p>
       </div>
@@ -70,6 +73,7 @@ function AboutUs() {
       <h1 style={style1}>About Us</h1>
       {boxesData.map((box, index) => (
         <Box
+          style={style2}
           key={index}
           image={box.image}
           heading={box.heading}

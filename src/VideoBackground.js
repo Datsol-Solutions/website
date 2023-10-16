@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Video.css';
-import video from './media/background_HD.mp4';
+import video from './media/Background.mp4';
 import logo from './media/logo_b.png';
 
 const style2 = {
-  fontFamily: 'IBM Plex Sans, sans-serif',
-  fontSize: '4vw',
+  fontFamily: 'Rokkitt, sans-serif',
+  fontSize: '3.8vw',
 };
 
 export default function BackgroundVideo() {

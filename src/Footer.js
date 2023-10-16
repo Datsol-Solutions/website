@@ -15,15 +15,15 @@ const Footer = () => {
     <footer className="footer" style={style2}>
       <div className="footer-columns">
         <div className="footer-column">
-          <p className="items">Back to top</p>
-          <p className="items">About Us</p>
-          <p className="items">Services</p>
-          <p className="items">Our Team</p>
+          <a className='items' href="#home">Back to top</a>
+          <a className='items' href="#about">About Us</a>
+          <a className='items' href="#services">Services</a>
+          <a className='items' href="#ourteam">Our Team</a>
         </div>
 
         <div className="footer-column">
-          <p className="items">DatsolSolutions@gmail.com</p>
-          <p className="items">Ph No.- 99999999999</p>
+          <p className='items'>DatsolSolutions@gmail.com</p>
+          <p className='items'>Ph No.- 99999999999</p>
         </div>
       </div>
 
