@@ -12,18 +12,18 @@ const style2 = {
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" style={style2}>
       <div className="footer-columns">
         <div className="footer-column">
           <a className='items' href="#home">Back to top</a>
-          <a className='items'href="#about">About Us</a>
-          <a className='items'href="#services">Services</a>
-          <a className='items'href="#ourteam">Our Team</a>
+          <a className='items' href="#about">About Us</a>
+          <a className='items' href="#services">Services</a>
+          <a className='items' href="#ourteam">Our Team</a>
         </div>
 
         <div className="footer-column">
-          <p>DatsolSolutions@gmail.com</p>
-          <p>Ph No.- 99999999999</p>
+          <p className='items'>DatsolSolutions@gmail.com</p>
+          <p className='items'>Ph No.- 99999999999</p>
         </div>
       </div>
 

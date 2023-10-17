@@ -21,7 +21,7 @@ function ParallaxEffect2() {
   }, []);
 
   // Calculate the background position based on the scroll position
-  const backgroundPositionY = scrollPosition * 0.25 + 'px';
+  const backgroundPositionY = scrollPosition * 0.015 + 'px';
 
   const containerStyle = {
     backgroundImage: `url('/s2.jpg')`,
