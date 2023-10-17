@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
   }
   
   .logocontact {
@@ -60,10 +60,16 @@
     transition: transform 0.3s ease-in-out;
   }
   
-  @media screen and (max-width: 768px) {
-    .contact-us-container{
+  @media screen and (max-width: 500px) {
+    .contact-container{
       display: flex;
       flex-direction: column;
+    }
+    .logocontact{
+      width: 100%;
+    }
+    .form-container{
+      width: 100%;
     }
   }
   
