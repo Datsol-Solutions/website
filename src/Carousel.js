@@ -38,7 +38,7 @@ function Carousel({ cards }) {
   const [isHovered, setIsHovered] = useState(false);
 
   // Calculate translateValue to achieve the desired layout
-  const cardWidth = 26.66; // Width of each card in percentage
+  const cardWidth = 15; // Width of each card in percentage
   const screenWidth = 80; // Total screen width in percentage
   const translateValue = -(activeIndex * cardWidth) + 10; // Adjusted translateValue
 
