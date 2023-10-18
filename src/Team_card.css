@@ -146,7 +146,7 @@
 
     /*Text*/
     .card-title {
-        font-size: 0.6em;
+        font-size: 0.8em;
         color: #081F37;
         font-weight: 600;
         line-height: 1.2rem;
@@ -154,7 +154,7 @@
 
     .card-subtitle {
         color: #68869A;
-        font-size: 0.5em;
+        font-size: 0.7em;
     }
 
 }
