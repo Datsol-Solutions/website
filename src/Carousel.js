@@ -59,12 +59,15 @@ function Carousel({ cards }) {
     }
   }, [activeIndex, lastIndex]);
 
+  const nextSlide = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
+  };
   return (
-    <div
-      className="carousel-container"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="carousel-container" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <h1 style={style1}> Our Services </h1>
       <div className="carousel" style={{ transform: `translateX(${translateValue}%)` }}>
         {cards.map((card, index) => (
@@ -75,6 +78,14 @@ function Carousel({ cards }) {
             className={`card2 ${index === activeIndex ? 'active' : ''}`}
           />
         ))}
+      </div>
+      <div className="carousel-buttons">
+        <button onClick={prevSlide} className="prev-button">
+          Previous
+        </button>
+        <button onClick={nextSlide} className="next-button">
+          Next
+        </button>
       </div>
     </div>
   );

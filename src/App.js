@@ -13,6 +13,7 @@ import ContactForm from './contact';
 import ScrollButton from './ScrollButton';
 import Footer from './Footer';
 import ParallaxEffect2 from './separation2';
+import Carousel2 from './services';
 
 export default function App() {
   const cardsData = [
@@ -93,9 +94,7 @@ export default function App() {
       </section>
         
       <section id="services">
-        <div className="App">
-          <Carousel cards={cardsData} />
-        </div>
+        <div><Carousel2/></div>
         <div>
           <ParallaxEffect2 />
         </div>

@@ -1,0 +1,8 @@
+
+@import "react-alice-carousel/lib/alice-carousel.css";
+.slick-next:before{
+  color:#686896;
+}
+.slick-prev:before{
+  color:#686896;
+}
