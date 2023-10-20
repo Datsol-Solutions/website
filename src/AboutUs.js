@@ -9,7 +9,7 @@ import image2 from './media/What_we_do.jpg';
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
-  padding: '5vw',
+  margin: '5vw',
 };
 
 const style2 = {
