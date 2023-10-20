@@ -9,7 +9,9 @@ const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
   margin: '5vw',
 };
-
+const style2 = {
+  fontFamily: 'IBM Plex Sans, sans-serif',
+};
 const cards = [
   {
     title: 'Software Development',
@@ -33,9 +35,9 @@ const Article = ({ data }) => {
   const { title, description } = data;
   return (
     <figure className="snip1584 card2">
-      <figcaption>
-        <h3>{title}</h3>
-        <h5>{description}</h5>
+      <figcaption style={style2}>
+        <h3> <b> {title} </b> </h3>
+        <p>{description}</p>
       </figcaption>
       <a href="#"></a>
     </figure>
@@ -58,6 +60,9 @@ const News = ({ data }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,  // Add autoplay property
+    autoplaySpeed: 1700,  // Set the speed (in milliseconds) for automatic rotation
+    pauseOnHover: true,  // Pause on hover
     prevArrow: <button className="slick-prev">Previous</button>,
     nextArrow: <button className="slick-next">Next</button>,
     responsive: [

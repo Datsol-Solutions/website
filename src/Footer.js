@@ -23,7 +23,8 @@ const Footer = () => {
 
         <div className="footer-column">
           <p className='items'>DatsolSolutions@gmail.com</p>
-          <p className='items'>Ph No.- 99999999999</p>
+          <p className='items'>Ph No.- 7821040764</p>
+          <p className='items'>Ph No.- 7060529746</p>
         </div>
       </div>
 
