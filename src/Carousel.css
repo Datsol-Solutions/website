@@ -31,7 +31,7 @@
   text-align: left;
   color: #081f37;
   background-color: #BBE1FA;
-  height: 300px; /* Add this line to set a fixed height */
+  height: 250px; /* Add this line to set a fixed height */
   /* border: 1px solid #242b45; */
   transition: transform 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
 }

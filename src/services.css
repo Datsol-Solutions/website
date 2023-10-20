@@ -2,7 +2,12 @@
 @import "react-alice-carousel/lib/alice-carousel.css";
 .slick-next:before{
   color:#686896;
+  font-size: 30px;
 }
 .slick-prev:before{
   color:#686896;
+  font-size: 30px;
+}
+.slick-dots li button:before {
+  font-size: 10px;
 }
