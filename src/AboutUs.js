@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import image3 from './media/How_we_help_you.jpg';
-import image1 from './media/Who_we_are.png';
+import image1 from './media/Who_we_are.jpg';
 import image2 from './media/What_we_do.jpg';
 
 const style1 = {
