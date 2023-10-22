@@ -14,6 +14,7 @@ import ScrollButton from './ScrollButton';
 import Footer from './Footer';
 import ParallaxEffect2 from './separation2';
 import Carousel2 from './services';
+import LogosSection from './HallOfFame';
 
 export default function App() {
   const cardsData = [
@@ -85,20 +86,23 @@ export default function App() {
           <ParallaxEffect />
         </div>
       </section>
-      
-      
       <section id="achievements">
         <div>
           <Achievement />
         </div>
       </section>
-        
+      <section id="logos">
+        <div>
+          <LogosSection/>
+        </div>
+      </section>
       <section id="services">
         <div><Carousel2/></div>
         <div>
           <ParallaxEffect2 />
         </div>
       </section>
+      
       <section id="ourteam">
         <div>
           <OurTeam />
