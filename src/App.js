@@ -9,7 +9,7 @@ import ParallaxEffect from './seperation';
 import AboutUs from './AboutUs';
 import Achievement from './Achievement';
 import Carousel from './Carousel';
-import Contact from './try';
+import Contact from './form';
 import ScrollButton from './ScrollButton';
 import Footer from './Footer';
 import ParallaxEffect2 from './separation2';
