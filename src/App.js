@@ -9,7 +9,7 @@ import ParallaxEffect from './seperation';
 import AboutUs from './AboutUs';
 import Achievement from './Achievement';
 import Carousel from './Carousel';
-import ContactForm from './contact';
+import Contact from './try';
 import ScrollButton from './ScrollButton';
 import Footer from './Footer';
 import ParallaxEffect2 from './separation2';
@@ -63,7 +63,7 @@ export default function App() {
     },
     // Add more card data as needed
   ];
-
+  // const formActionUrl = 'https://script.google.com/macros/s/AKfycbwo-ODrYl-EcHqzdch55LVZHiuh5NeT2mRPGLAU3No1MjLAfRQcF0Tv_elt0uv-zwo/exec'
   return (
     <Router>
       <div className='navigation-bar abc'>
@@ -107,7 +107,7 @@ export default function App() {
       </section>
       <section id="contact">
         <div>
-          <ContactForm />
+          <Contact formActionUrl="https://script.google.com/macros/s/AKfycbzTC5jr-JFzedxvWGb44LOzBuTiNJ85A1cU2O4_xutQgprhp0yxNM31fqzeLiDYxTu1/exec" />
         </div>
       </section>
       <Footer />
