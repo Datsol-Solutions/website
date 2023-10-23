@@ -1,0 +1,29 @@
+.logos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+  }
+  
+  .logo-row {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 2%;
+  }
+  
+  .HallofFamelogo {
+    max-width: 4%;  /* Adjust the maximum width of each logo as needed */
+    max-height: auto;  /* Adjust the maximum height of each logo as needed */
+    margin-left: 2%;
+    margin-right: 2%;
+    filter: grayscale(100%);
+    opacity: 70%;
+    transition: filter 0.2s ease-in-out;
+  }
+  
+  .HallofFamelogo:hover {
+    filter: grayscale(0%);
+    opacity: 100%;
+  }

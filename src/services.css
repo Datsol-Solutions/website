@@ -1,0 +1,45 @@
+
+@import "react-alice-carousel/lib/alice-carousel.css";
+.slick-next:before{
+  color:#686896;
+  font-size: 30px;
+}
+.slick-prev:before{
+  color:#686896;
+  font-size: 30px;
+}
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
+.carousel-container h1{
+  padding-left: 35%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .card2{
+    padding:20px;
+  }
+  
+}
+@media only screen and (max-width: 768px) {
+  .card2{
+   height:200px;
+  }
+   .card2 h3{
+    font-size: 1rem;
+   }
+  
+  .card2 p{
+    font-size: 0.9rem;
+  }
+  .slick-next:before{
+    color:#686896;
+    font-size: 20px;
+  }
+  .slick-prev:before{
+    color:#686896;
+    font-size: 20px;
+  }
+  
+}

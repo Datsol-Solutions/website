@@ -91,6 +91,7 @@ const AchievementSection = () => {
     <div id="achievement-section" className="achievement-section" ref={sectionRef}>
       <div className="map-gif">
       <WorldMap
+      className='map'
         color="#1e6dad"
         title=""
         value-suffix="people"
