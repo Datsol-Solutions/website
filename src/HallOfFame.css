@@ -14,11 +14,11 @@
   }
   
   .HallofFamelogo {
-    max-width: 4%;  /* Adjust the maximum width of each logo as needed */
-    max-height: auto;  /* Adjust the maximum height of each logo as needed */
+    max-width: auto;  /* Adjust the maximum width of each logo as needed */
+    height: 40px;  /* Adjust the maximum height of each logo as needed */
     margin-left: 2%;
     margin-right: 2%;
-    filter: grayscale(100%);
+    filter: grayscale(80%);
     opacity: 70%;
     transition: filter 0.2s ease-in-out;
   }
@@ -26,4 +26,44 @@
   .HallofFamelogo:hover {
     filter: grayscale(0%);
     opacity: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    .HallofFamelogo 
+      { 
+      height: 30px;  
+        }
+    }
+    
+  @media only screen and (max-width: 900px) {
+      .HallofFamelogo 
+         {  
+        height: 25px; 
+          }
+      }
+  @media only screen and (max-width: 770px) {
+        .HallofFamelogo 
+        {  
+          height: 20px;  /* Adjust the maximum height of each logo as needed */
+            }
+        }
+
+@media only screen and (max-width: 600px) {
+    .HallofFamelogo 
+     {  /* Adjust the maximum width of each logo as needed */
+    height: 15px;  /* Adjust the maximum height of each logo as needed */
+      }
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .HallofFamelogo 
+     {  /* Adjust the maximum width of each logo as needed */
+    height: 12px;  /* Adjust the maximum height of each logo as needed */
+      }
+  }
+  @media only screen and (max-width: 360px) {
+    .HallofFamelogo 
+     {  /* Adjust the maximum width of each logo as needed */
+    height: 8px;  /* Adjust the maximum height of each logo as needed */
+      }
   }
