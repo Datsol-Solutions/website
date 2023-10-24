@@ -1,5 +1,5 @@
 import React from 'react';
-import './HallOfFame.css';  // Import your CSS file for styling, replace 'logos.css' with your actual CSS file
+import './HallOfFame.css'; // Import your CSS file for styling, replace 'logos.css' with your actual CSS file
 
 // Assuming logos are in the same directory as LogosSection.js
 import logo1 from './media/logosSection/180 DC.png';
@@ -37,39 +37,8 @@ import logo32 from './media/logosSection/Zeeve.png';
 import logo33 from './media/logosSection/Zolve.png';
 
 const logos = [
-  logo1,
-  logo2,
-  logo3,
-  logo4,
-  logo5,
-  logo6,
-  logo7,
-  logo8,
-  logo9,
-  logo10,
-  logo11,
-  logo12,
-  logo13,
-  logo14,
-  logo15,
-  logo16,
-  logo17,
-  logo18,
-  logo19,
-  logo20,
-  logo21,
-  logo22,
-  logo23,
-  logo24,
-  logo25,
-  logo26,
-  logo27,
-  logo28,
-  logo29,
-  logo30,
-  logo31,
-  logo32,
-  logo33,
+  logo1,logo2,logo3,logo4,logo5,logo6,logo7,logo8,logo9,logo10,logo11,logo12,logo13,logo14,logo15,logo16,logo17,
+  logo18,logo19,logo20,logo21,logo22,logo23,logo24,logo25,logo26,logo27,logo28,logo29,logo30,logo31,logo32,logo33,
 ];
 
 const LogosSection = () => {
