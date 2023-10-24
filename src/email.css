@@ -1,0 +1,35 @@
+/* email.css */
+.container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  .logo {
+    text-align: center; /* Center the logo horizontally */
+  }
+  
+  .contactlogo img {
+    height: 100%;
+    width: 100%; /* Set the logo to fill the entire width of its container */
+    max-height: 100%; /* Ensure that the logo maintains its aspect ratio */
+  }
+  
+  .emailForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff; /* Set your preferred background color */
+  }
+  
+  .emailForm input,
+  .emailForm textarea,
+  .emailForm button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add styling to input elements */
+  }
+  
+  /* Add any additional styling as needed */
+  

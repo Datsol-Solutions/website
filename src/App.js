@@ -9,7 +9,7 @@ import ParallaxEffect from './seperation';
 import AboutUs from './AboutUs';
 import Achievement from './Achievement';
 import Carousel from './Carousel';
-import Contact from './form';
+import Contact from './email';
 import ScrollButton from './ScrollButton';
 import Footer from './Footer';
 import ParallaxEffect2 from './separation2';
@@ -110,7 +110,7 @@ export default function App() {
       </section>
       <section id="contact">
         <div>
-          <Contact formActionUrl="https://script.google.com/macros/s/AKfycbzTC5jr-JFzedxvWGb44LOzBuTiNJ85A1cU2O4_xutQgprhp0yxNM31fqzeLiDYxTu1/exec" />
+          <Contact />
         </div>
       </section>
       <Footer />

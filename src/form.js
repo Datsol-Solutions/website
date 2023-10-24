@@ -43,16 +43,12 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      {/* Add similar input fields for other form data */}
-      <button type="submit">Submit</button>
+      <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
+        <input type="text" name="businessName" placeholder="Business Name" value={formData.businessName} onChange={handleChange} />
+        <input type="email" name="businessEmail" placeholder="Business Email" value={formData.businessEmail} onChange={handleChange} />
+        <input type="tel" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
+        <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange}></textarea>
+        <button type="submit">Submit</button>
     </form>
   );
 }

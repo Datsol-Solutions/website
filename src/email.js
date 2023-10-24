@@ -1,31 +1,69 @@
-// email.js
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './email.css';
+import logo from './media/logo_b.png';
+const EmailForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-const nodemailer = require('nodemailer');
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-// Create a transporter object using SMTP
-const transporter = nodemailer.createTransport({
-  service: 'Gmail', // e.g., 'Gmail'
-  auth: {
-    user: 'harshithanakda2002@gmail.com',
-    pass: 'HoneyNakda02%',
-  },
-});
+    // Your EmailJS service ID, template ID, and Public Key
+    const serviceId = 'service_smx66xn';
+    const templateId = 'template_1w4oite';
+    const publicKey = 'Zf_Ku7apkVfS4cTJn';
 
-// Function to send an email
-async function sendEmail(name, email, message) {
-  const mailOptions = {
-    from: 'harshithanakda2002@gmail.com',
-    to: email,
-    subject: 'Thank you for contacting us',
-    text: `Dear ${name},\n\nThank you for reaching out to us. Your message has been received and will be addressed soon.\n\nMessage: ${message}`,
+    // Create a new object that contains dynamic template params
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: name,
+      message: message,
+    };
+
+    // Send the email using EmailJS
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        setName('');
+        setEmail('');
+        setMessage('');
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
   };
 
-  try {
-    await transporter.sendMail(mailOptions);
-    console.log('Email sent');
-  } catch (error) {
-    console.error('Error sending email', error);
-  }
-}
+  return (
+    <div className="container">
+      <div className="contactlogo">
+        <img src={logo} alt='Your Company Logo' />
+      </div>
+      <form onSubmit={handleSubmit} className="emailForm">
+        <input
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <textarea
+          cols="30"
+          rows="10"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
+        <button type="submit">Send Email</button>
+      </form>
+    </div>
+  );
+};
 
-module.exports = sendEmail;
+export default EmailForm;

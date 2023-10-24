@@ -15,19 +15,35 @@ function MyForm({ formActionUrl }) {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can perform your form submission logic here, e.g., send data to an API
 
-    // Reset the form after submission if needed
-    setFormData({
-      Email: '',
-      Name: ''
-    });
+    try {
+      const response = await fetch(formActionUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Thank you! Your data has been submitted.');
+        setFormData({
+          Email: '',
+          Name: ''
+        });
+      } else {
+        alert('Failed to submit the data. Please try again.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('An error occurred while submitting the data.');
+    }
   };
 
   return (
-    <form method="POST" action={formActionUrl} onSubmit={handleSubmit}>
+    <form method="POST" mode='no-cors' onSubmit={handleSubmit}>
       <input
         name="Email"
         type="email"
