@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './email.css';
 import logo from './media/logo_b.png';
+
 const EmailForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
