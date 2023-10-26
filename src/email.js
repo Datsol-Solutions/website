@@ -15,14 +15,15 @@ const EmailForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submissionMessage, setSubmissionMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Your EmailJS service ID, template ID, and Public Key
-    const serviceId = 'service_smx66xn';
-    const templateId = 'template_1w4oite';
-    const publicKey = 'Zf_Ku7apkVfS4cTJn';
+    const serviceId = 'service_zbs7ivc';
+    const templateId = 'template_7e98q9k';
+    const publicKey = 'A8vcwyJZlHICUnjIt';
 
     // Create a new object that contains dynamic template params
     const templateParams = {
@@ -39,9 +40,11 @@ const EmailForm = () => {
         setName('');
         setEmail('');
         setMessage('');
+        alert('Thank you! Your message has been received. Our team will get in touch with you soon.');
       })
       .catch((error) => {
         console.error('Error sending email:', error);
+        alert('Oops! There was an error submitting your application. Please try again later.');
       });
   };
 

@@ -94,7 +94,9 @@ function Navibar() {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <img src={logo} alt='Your Company Logo' />
+        <a href="#home"> 
+          <img src={logo} alt='Your Company Logo' />
+        </a>
       </div>
       <div
         className={`mobile-menu-icon ${isMobileMenuOpen ? 'open' : ''}`}
