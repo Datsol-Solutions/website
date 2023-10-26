@@ -1,16 +1,19 @@
 /* email.css */
-.container {
+.formcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5vw;
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-gap: 20px; /* Adjust the gap as needed */
   }
   
-  .logo {
-    text-align: center; /* Center the logo horizontally */
-  }
+  /* .logo {
+    text-align: center; 
+  } */
   
   .contactlogo img {
-    height: 100%;
+    height: auto;
     width: 100%; /* Set the logo to fill the entire width of its container */
     max-height: 100%; /* Ensure that the logo maintains its aspect ratio */
   }
@@ -26,7 +29,7 @@
   .emailForm input,
   .emailForm textarea,
   .emailForm button {
-    margin: 10px 0;
+    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc; /* Add styling to input elements */
   }

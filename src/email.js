@@ -3,6 +3,14 @@ import emailjs from '@emailjs/browser';
 import './email.css';
 import logo from './media/logo_b.png';
 
+const style1 = {
+  fontFamily: 'Rokkitt, sans-serif',
+};
+
+const style2 = {
+  fontFamily: 'IBM Plex Sans, sans-serif',
+};
+
 const EmailForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -38,30 +46,49 @@ const EmailForm = () => {
   };
 
   return (
-    <div className="container">
+    <div className="formcontainer">
       <div className="contactlogo">
         <img src={logo} alt='Your Company Logo' />
       </div>
       <form onSubmit={handleSubmit} className="emailForm">
+      <h1 style={style1}>Contact Us</h1>
+        <label htmlFor="name" style={style1}>
+              <h5>Name:</h5>
+          </label>
+          <input
+            name="name"
+            style={style2}
+            type="text"
+            placeholder="Enter your Name"
+            value={name}
+            required
+            onChange={(e) => setName(e.target.value)}
+          />
+        <label htmlFor="email" style={style1}>
+              <h5>Email:</h5>
+          </label>
         <input
-          type="text"
-          placeholder="Your Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
+          name="email"
+          style={style2}
           type="email"
-          placeholder="Your Email"
+          placeholder="Enter your Email"
           value={email}
+          required
           onChange={(e) => setEmail(e.target.value)}
         />
+        <label htmlFor="message" style={style1}>
+              <h5>Message:</h5>
+            </label>
         <textarea
+        name="message"
+        style={style2}
           cols="30"
-          rows="10"
+          rows="4"
+          placeholder="Enter your message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <button type="submit">Send Email</button>
+        <button className="button-content" type="submit">Submit</button>
       </form>
     </div>
   );
