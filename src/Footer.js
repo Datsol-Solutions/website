@@ -22,15 +22,14 @@ const Footer = () => {
         </div>
 
         <div className="footer-column">
-          <p className='items'>DatsolSolutions@gmail.com</p>
+          <p className='items'>datsolsolutions@gmail.com</p>
           <p className='items'>Ph No.- 7821040764</p>
           <p className='items'>Ph No.- 7060529746</p>
         </div>
       </div>
 
       <hr className="footer-divider" />
-
-      <p className="footer-company">Copyright © 2023DatsolSolutions.com</p>
+      <p className="footer-company">Copyright © 2023datsolsolutions.com</p>
     </footer>
   );
 };
