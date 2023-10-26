@@ -16,7 +16,7 @@ function ParallaxEffect() {
     };
   }, []);
 
-  const backgroundPositionY = scrollPosition * 0.025 + 'px';
+  const backgroundPositionY = scrollPosition * 0.023 + 'px';
 
   const containerStyle = {
     backgroundImage: `url('/s1.jpg')`,
