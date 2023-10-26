@@ -86,7 +86,7 @@ const EmailForm = () => {
         name="message"
         style={style2}
           cols="30"
-          rows="4"
+          rows="3"
           placeholder="Enter your message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
