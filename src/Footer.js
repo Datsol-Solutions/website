@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-column">
-          <p className='items'>datsolsolutions@gmail.com</p>
+          <p className='items'>Mail-<a className='maillink' href="mailto:datsolsolutions@gmail.com?subject="> datsolsolutions@gmail.com</a></p>
           <p className='items'>Ph No.- 7821040764</p>
           <p className='items'>Ph No.- 7060529746</p>
         </div>
