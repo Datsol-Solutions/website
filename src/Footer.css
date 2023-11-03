@@ -47,6 +47,14 @@
   font-size: 14px;
   color: #081F37;
 }
+.maillink{
+  text-decoration: none;
+  color: #081F37;
+}
+.dial-icon{
+  color: #081F37;
+  height: 1rem;
+}
 
 @media only screen and (max-width: 1000px) {
   .items {
