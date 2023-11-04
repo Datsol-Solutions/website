@@ -23,11 +23,11 @@ const Footer = () => {
               <img className='dial-icon' src={email} alt="Email" /> datsolsolutions@gmail.com
             </a>
           </p>
-          <a className='items' href="tel:7821040764">
-            <img className='dial-icon' src={dial} alt="Phone" /> 7821040764
+          <a className='items' href="tel:+91 7821040764">
+            <img className='dial-icon' src={dial} alt="Phone" />+91 7821040764
           </a>
-          <a className='items' href="tel:7060529746">
-            <img className='dial-icon' src={dial} alt="Phone" /> 7060529746
+          <a className='items' href="tel:+91 7060529746">
+            <img className='dial-icon' src={dial} alt="Phone" />+91 7060529746
           </a>
           
           
