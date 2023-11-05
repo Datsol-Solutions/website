@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className="footer" style={style2}>
       <div className="footer-columns">
       <div className="footer-column">
-        <p>Datsol Solutions <br/>IIT Kharagpur, India - 721302</p>
+        <p><h4><b>Datsol Solutions</b></h4> <br/>IIT Kharagpur, India - 721302</p>
           <p className='items'>
             <a className='maillink' href="mailto:datsolsolutions@gmail.com?subject=">
               <img className='dial-icon' src={email} alt="Email" /> datsolsolutions@gmail.com
