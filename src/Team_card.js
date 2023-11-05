@@ -16,7 +16,12 @@ function Teamcard(props) {
     event.preventDefault();
 
     // Display an alert message with the email ID link
-    window.alert(`Email ID: ${props.gmaillink}`);
+    // window.alert(`Email ID: ${props.gmaillink}`);
+    // Create a Gmail compose URL with the 'mailto' link format
+    const gmailComposeURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${props.gmaillink}`;
+
+    // Open a new window or tab with the Gmail compose URL
+    window.open(gmailComposeURL, '_blank');
   };
 
   return (

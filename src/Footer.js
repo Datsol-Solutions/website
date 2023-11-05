@@ -12,6 +12,20 @@ const style2 = {
   fontFamily: 'IBM Plex Sans, sans-serif',
 };
 
+const handleGmailClick = (event) => {
+  // Prevent the default behavior (page refresh) of the anchor element
+  event.preventDefault();
+
+  // Display an alert message with the email ID link
+  // window.alert(`Email ID: ${props.gmaillink}`);
+  // Create a Gmail compose URL with the 'mailto' link format
+  const gmailComposeURL = `https://mail.google.com/mail/?view=cm&fs=1&to=datsolsolutions@gmail.com`;
+
+  // Open a new window or tab with the Gmail compose URL
+  window.open(gmailComposeURL, '_blank');
+};
+
+
 const Footer = () => {
   return (
     <footer className="footer" style={style2}>
@@ -19,7 +33,7 @@ const Footer = () => {
       <div className="footer-column">
         <p><h4><b>Datsol Solutions</b></h4> <br/>IIT Kharagpur, India - 721302</p>
           <p className='items'>
-            <a className='maillink' href="mailto:datsolsolutions@gmail.com?subject=">
+            <a className='maillink' href="" onClick={handleGmailClick}>
               <img className='dial-icon' src={email} alt="Email" /> datsolsolutions@gmail.com
             </a>
           </p>
