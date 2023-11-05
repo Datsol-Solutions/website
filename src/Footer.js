@@ -23,7 +23,7 @@ const Footer = () => {
               <img className='dial-icon' src={email} alt="Email" /> datsolsolutions@gmail.com
             </a>
           </p>
-          <a className='items' href="tel:+91 7821040764">
+          <a className='items' href="tel:+91 9044750387">
             <img className='dial-icon' src={dial} alt="Phone" />+91 9044750387
           </a>
           <a className='items' href="tel:+91 7060529746">
