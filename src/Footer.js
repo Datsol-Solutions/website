@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
           </p>
           <a className='items' href="tel:+91 7821040764">
-            <img className='dial-icon' src={dial} alt="Phone" />+91 7821040764
+            <img className='dial-icon' src={dial} alt="Phone" />+91 9044750387
           </a>
           <a className='items' href="tel:+91 7060529746">
             <img className='dial-icon' src={dial} alt="Phone" />+91 7060529746
