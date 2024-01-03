@@ -20,16 +20,14 @@ const Footer = () => {
       <div className="footer-column">
         <p><h4><b>Datsol Solutions</b></h4> <br/>IIT Kharagpur, India - 721302</p>
           <p className='items'>
-            <a className='maillink' href="mailto:datsolsolutions@gmail.com">
-              <img className='dial-icon' src={email} alt="Email" /> datsolsolutions@gmail.com
+            <a className='maillink' href="mailto:info@datsolsolutions.com">
+              <img className='dial-icon' src={email} alt="Email" /> info@datsolsolutions.com
             </a>
           </p>
           <a className='items' href="tel:+91 9044750387">
             <img className='dial-icon' src={dial} alt="Phone" />+91 9044750387
           </a>
-          <a className='items' href="tel:+91 7060529746">
-            <img className='dial-icon' src={dial} alt="Phone" />+91 7060529746
-          </a>
+          
           
           
         </div>

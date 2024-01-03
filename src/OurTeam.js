@@ -11,6 +11,9 @@ import Swapnil from './media/Swapnil.png';
 import Tanisha from './media/Tanisha.png';
 import Subham from './media/Shubham.png';
 import Gaurav from './media/Gaurav.png';
+import Shriyanshu from './media/Shriyanshu.jpg';
+import Ankush from './media/Ankush.jpg'
+import Priyank from './media/Priyank.jpg'
 
 const style1 = {
   fontFamily: 'Rokkitt, sans-serif',
@@ -23,31 +26,13 @@ const style2 = {
 function OurTeam() {
   const teamHeadData = [
     {
-      id: 1,
-      name: 'Kajal Singh',
-      subtitle:'Team Lead',
-      image: Kajal,
-      gmaillink: 'Kajalsinghmbd2001@gmail.com',
-      inlink: 'https://www.linkedin.com/in/kajal-singh-164242213',
-    },
-    {
       id: 2,
-      name: 'Subham Kumar',
-      subtitle:'Team Lead',
-      image: Subham,
-      gmaillink: '2002subhamkumar@gmail.com',
-      inlink: 'https://www.linkedin.com/in/subham-kumar-054221215/',
-    },
-    {
-      id: 3,
-      name: 'Shivam Ratne',
+      name: 'Ankush Agrawal',
       subtitle:'Associate Team Lead',
-      image: Shivam,
-      gmaillink: 'shivamratne999@gmail.com',
-      inlink: 'http://www.linkedin.com/in/shivamratne',
-    }
-  ];
-  const teamData = [
+      image: Ankush,
+      gmaillink: 'ankush.251218.agarwal@gmail.com',
+      inlink: 'https://www.linkedin.com/in/ankush-agarwal-b71097200/',
+    },
     {
       id: 1,
       name: 'Tanisha Panda',
@@ -57,6 +42,16 @@ function OurTeam() {
       inlink: 'https://www.linkedin.com/in/tanisha-panda-0a8131205',
     },
     {
+      id: 3,
+      name: 'Priyank Mudra',
+      subtitle:'Associate Member',
+      image: Priyank,
+      gmaillink: 'Priyankmundra61@gmail.com',
+      inlink: 'https://www.linkedin.com/in/priyank-mundra-06865b205/',
+    },
+  ];
+  const teamData = [
+    {
       id: 2,
       name: 'Gaurav Chanchal',
       subtitle:'Associate Member',
@@ -65,15 +60,15 @@ function OurTeam() {
       inlink: 'https://www.linkedin.com/in/gaurav-chanchal',
     },
     {
-      id: 3,
-      name: 'Tanu Sharma',
-      subtitle:'Associate Member',
-      image: Tanu,
-      gmaillink: 'tanusharma0801@gmail.com',
-      inlink: 'https://www.linkedin.com/in/tanu-sharma-1395b1224/',
+      id: 1,
+      name: 'Kajal Singh',
+      subtitle:'Team Lead',
+      image: Kajal,
+      gmaillink: 'Kajalsinghmbd2001@gmail.com',
+      inlink: 'https://www.linkedin.com/in/kajal-singh-164242213',
     },
     {
-      id: 4,
+      id: 3,
       name: 'Himanshu Singh',
       subtitle:'Associate Member',
       image: Himanshu,
@@ -81,24 +76,24 @@ function OurTeam() {
       inlink: 'https://www.linkedin.com/in/himanshu-singh-360b9321a',
     },
     {
-      id: 5,
-      name: 'Swapnil Shekhar',
-      subtitle:'Associate Member',
-      image: Swapnil,
-      gmaillink: 'swapnil7924@gmail.com',
-      inlink: 'https://www.linkedin.com/in/swapnil-shekhar7',
+      id: 4,
+      name: 'Shriyanshu Kumar',
+      subtitle:'Team Lead',
+      image: Shriyanshu,
+      gmaillink: 'Shriyanshu.sinha.aub@gmail.com',
+      inlink: 'https://www.linkedin.com/in/shriyanshu-kumar-2773451ba/',
     },
   ];
   return (
     <section>
       <div className="our-team">
-        <h1 style={style1}>Client and Strategy Team</h1>
+        <h1 style={style1}>Meet our Executives</h1>
         <div style={style2} className="team-head-cards">
         {teamHeadData.map((teamMember) => (
           <Teamcard
             key={teamMember.id}
             name={teamMember.name}
-            subtitle={teamMember.subtitle}
+            // subtitle={teamMember.subtitle}
             image={teamMember.image}
             gmaillink={teamMember.gmaillink}
             inlink={teamMember.inlink}
