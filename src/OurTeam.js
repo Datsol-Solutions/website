@@ -83,6 +83,15 @@ function OurTeam() {
       gmaillink: 'Shriyanshu.sinha.aub@gmail.com',
       inlink: 'https://www.linkedin.com/in/shriyanshu-kumar-2773451ba/',
     },
+    {
+      id: 5,
+      name: 'Swapnil Shekhar',
+      subtitle:'Team Lead',
+      image: Swapnil,
+      gmaillink: 'swapnil7924@gmail.com',
+      inlink: 'https://www.linkedin.com/in/swapnil-shekhar7',
+    }
+    
   ];
   return (
     <section>
