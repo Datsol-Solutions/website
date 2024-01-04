@@ -114,7 +114,7 @@ function OurTeam() {
           <Teamcard
             key={teamMember.id}
             name={teamMember.name}
-            subtitle={teamMember.subtitle}
+            // subtitle={teamMember.subtitle}
             image={teamMember.image}
             gmaillink={teamMember.gmaillink}
             inlink={teamMember.inlink}
