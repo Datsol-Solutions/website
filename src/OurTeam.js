@@ -43,7 +43,7 @@ function OurTeam() {
     },
     {
       id: 3,
-      name: 'Priyank Mudra',
+      name: 'Priyank Mundra',
       subtitle:'Associate Member',
       image: Priyank,
       gmaillink: 'Priyankmundra61@gmail.com',
